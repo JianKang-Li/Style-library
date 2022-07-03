@@ -2,11 +2,20 @@
   /* 字体初始化 */
   font-size: 16px;
   /* 初始化颜色 */
-  --pr-blue: #8fb2c9;
+  /* 蓝色 */
+  --pr-blue: #1e90ff;
+  /* 灰色 */
   --pr-gray: #c4cbcf;
+  /* 原色 */
   --primary: #dad4cb;
+  /* 警告 */
   --warning: #f8df70;
+  /* 白色 */
+  --pr-white: #ffffff;
+  /* 危险 */
   --danger: #d42517;
+  /* 阴影 */
+  --shadow: #ecf0f1;
 }
 
 * {
@@ -20,10 +29,15 @@ body {
   align-items: center;
 }
 
+body > div {
+  margin: 10px;
+}
+
 /* 容器 */
 .container {
   width: 20rem;
   height: 10rem;
+  background-color: var(--pr-gray);
 }
 
 /* 分割线 */
@@ -38,20 +52,25 @@ body {
 
 /* 卡片 */
 .card {
-  background-color: var(--primary);
   border-radius: 2%;
-}
-
-@keyframes card {
-  0% {
-    box-shadow: 0px 0px #ecf0f1;
-  }
-  100% {
-    box-shadow: 4px 4px 4px 4px #ecf0f1;
-  }
+  transition: all 0.5s;
 }
 
 .card:hover {
-  animation: card ease-in-out;
-  transition: all 1s;
+  box-shadow: 2px 4px 4px 2px var(--shadow);
+}
+
+/* 按钮 */
+.btn {
+  width: 5rem;
+  background-color: var(--pr-white);
+  border: 1px solid var(--pr-gray);
+  border-radius: 10px;
+  padding: 0.5rem;
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  background-color: var(--pr-blue);
+  color: var(--pr-white);
 }
