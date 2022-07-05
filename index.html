@@ -1,21 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/LK.css" />
-    <title>index</title>
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/LK.css" />
+  <title>index</title>
+  <style>
+    #hr {
+      width: 90%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="hr">
+    <label for="hr">hr分割线</label>
     <div class="hr"></div>
-    <div class="container card"></div>
+  </div>
+
+  <div>
+    <div class="card">
+      <h2>Card title</h2>
+      <div>
+        Card context.
+      </div>
+    </div>
     <div class="split"></div>
+  </div>
+
+  <div>
+    <label for="btn">按钮</label>
     <button class="btn">原生按钮</button>
-    <div class="split"></div>
     <button class="btn btn-warning">警告按钮</button>
-    <div class="split"></div>
     <button class="btn btn-danger">错误按钮</button>
-  </body>
+    <div class="split"></div>
+  </div>
+
+  <div>
+    <label for="btn">输入框</label>
+    <input type="text" name="" id="" class="LK-input">
+    <div class="split"></div>
+  </div>
+
+  <div>
+    <label for="">下拉选择</label>
+    <select class="LK-select">
+      <option selected>Open this select menu</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+  </div>
+
+</body>
+
 </html>

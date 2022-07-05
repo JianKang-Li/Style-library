@@ -5,19 +5,23 @@
   /* 蓝色 */
   --pr-blue: #1e90ff;
   /* 灰色 */
-  --pr-gray: #c4cbcf;
+  --pr-gray: #c1c1c1;
   /* 原色 */
   --primary: #dad4cb;
+  /* 克莱因蓝 */
+  --klein_blue: #002e9b;
   /* 警告 */
-  --warning: #ffc107;
+  --warning: #f5cd1b;
   /* 白色 */
   --pr-white: #ffffff;
   /* 危险 */
-  --danger: #dc3545;
+  --danger: #d7000f;
   /* 成功 */
   --success: #2ecc71;
   /* 阴影 */
   --shadow: #ecf0f1;
+  /* 边框 */
+  --border: #747d8c;
 }
 
 * {
@@ -32,11 +36,16 @@ body {
   align-items: center;
 }
 
-/* 容器 */
-.container {
-  width: 20rem;
-  height: 10rem;
-  background-color: var(--pr-gray);
+/* 激活样式 */
+.active {
+  background-color: var(--pr-blue);
+}
+
+/* label */
+label {
+  display: inline-block;
+  font-size: 1.2rem;
+  vertical-align: middle;
 }
 
 /* 分割线 */
@@ -50,32 +59,38 @@ body {
   border-radius: 2px;
 }
 
-/* 空白分割 */
+/* 空白分割,带清除浮动属性 */
 .split {
   width: 100%;
   height: 2px;
   margin-top: 2px;
   margin-bottom: 2px;
+  clear: both;
 }
 
 /* 卡片 */
 .card {
-  border-radius: 2%;
+  width: 15rem;
+  height: 10rem;
+  background-color: var(--pr-gray);
+  border-radius: 0.3rem;
+  padding: 1rem 1rem;
   transition: all 0.5s;
 }
 
 .card:hover {
-  box-shadow: 2px 4px 4px 2px var(--shadow);
+  box-shadow: 4px 4px 5px 3px var(--shadow);
 }
 
 /* 按钮 */
 .btn {
   width: fit-content;
   vertical-align: middle;
-  border: 1px solid var(--pr-gray);
-  border-radius: 10px;
   background-color: var(--pr-white);
+  border: 1px solid var(--pr-gray);
+  border-radius: 5px;
   padding: 0.5rem;
+  font-size: 0.8rem;
   cursor: pointer;
 }
 
@@ -91,4 +106,48 @@ body {
   color: var(--pr-white);
   background-color: var(--danger);
   border: 1px solid var(--danger);
+}
+
+/* 表单输入框 */
+.LK-input {
+  border: 1px solid var(--pr-gray);
+  padding: 0.37rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  outline: none;
+}
+
+.LK-input:focus {
+  border: 1px solid var(--border);
+}
+
+/* select */
+
+/* 清除浏览器默认样式 */
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+/* 自定义样式 */
+.LK-select {
+  border: 1px solid var(--pr-gray);
+  padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  outline: none;
+  line-height: 1.4;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+}
+
+option {
+  font-size: 1rem;
 }
