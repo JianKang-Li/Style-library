@@ -130,10 +130,6 @@ select {
   -webkit-appearance: none;
 }
 
-select::-ms-expand {
-  display: none;
-}
-
 /* 自定义样式 */
 .LK-select {
   border: 1px solid var(--pr-gray);
@@ -148,6 +144,73 @@ select::-ms-expand {
   background-size: 16px 12px;
 }
 
-option {
-  font-size: 1rem;
+.LK-select:focus {
+  border: 1px solid var(--border);
 }
+
+.LK-select option {
+  font-size: 1.1rem;
+}
+
+/* 文件上传input */
+.LK-file {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.LK-file {
+  cursor: pointer;
+  border: 1px solid var(--pr-gray);
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: var(--pr-white);
+  border-radius: 0.3rem;
+  padding: 0px;
+}
+
+/* 文件上传按钮 */
+.LK-file::-webkit-file-upload-button {
+  height: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  color: #212529;
+  border-width: 0;
+  background-color: var(--pr-blue);
+}
+
+/* 滑动条 */
+
+/* 清除默认样式 */
+.LK-range {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.LK-range {
+  height: 0.5em;
+  vertical-align: middle;
+  background-color: var(--shadow);
+  border-radius: 1rem;
+}
+
+/* 滑动块 */
+.LK-range::-webkit-slider-thumb {
+  /* 清除浏览器默认样式 */
+  -webkit-appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+  background-color: var(--pr-blue);
+}
+
+.LK-range::-moz-range-thumb {
+  -moz-appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+  background-color: var(--pr-blue);
+}
+
+/* 表格 */
