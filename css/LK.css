@@ -1,6 +1,10 @@
 :root {
   /* 字体初始化 */
   font-size: 16px;
+
+  /* 初始化间距 */
+  padding: 0;
+  margin: 0;
   /* 初始化颜色 */
   /* 蓝色 */
   --pr-blue: #1e90ff;
@@ -22,18 +26,17 @@
   --shadow: #ecf0f1;
   /* 边框 */
   --border: #747d8c;
-}
-
-* {
-  margin: 0;
-  padding: 0;
+  /* 黑色 */
+  --black: #000000;
+  /* 表格警告 */
+  --table-danger: #f8d7da;
 }
 
 /* flex布局 */
-body {
+.flex-layout {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 /* 激活样式 */
@@ -162,20 +165,22 @@ select {
 .LK-file {
   cursor: pointer;
   border: 1px solid var(--pr-gray);
+  width: 15rem;
+  height: fit-content;
   font-size: 1rem;
   font-weight: 400;
+  vertical-align: middle;
   background-color: var(--pr-white);
   border-radius: 0.3rem;
-  padding: 0px;
+  margin: 0;
 }
 
 /* 文件上传按钮 */
 .LK-file::-webkit-file-upload-button {
-  height: 2rem;
   cursor: pointer;
-  padding: 0.5rem 0.75rem;
   color: #212529;
   border-width: 0;
+  line-height: 2rem;
   background-color: var(--pr-blue);
 }
 
@@ -215,3 +220,29 @@ select {
 }
 
 /* 表格 */
+.LK-table {
+  font-size: 1.2rem;
+  width: 100%;
+  /* 边框合并 */
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.LK-table thead tr {
+  border-bottom: 1px solid var(--black);
+}
+
+.LK-table tr {
+  width: 100%;
+  border-bottom: 1px solid var(--pr-gray);
+  line-height: 2rem;
+}
+
+.LK-table td,
+.LK-table th {
+  padding: 0.5rem 0.5rem;
+}
+
+.table-danger {
+  background-color: var(--table-danger);
+}
