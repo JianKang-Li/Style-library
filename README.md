@@ -4,6 +4,9 @@
 
 [在线预览](https://jiankang-li.github.io/Style-library/)
 
+CDN引用
+`<link rel="stylesheet" href="https://jiankang-li.github.io/Style-library/css/LK.css">`
+
 ## 实现样式
 
 1. 分割线
