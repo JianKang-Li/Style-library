@@ -9,7 +9,7 @@
   /* 蓝色 */
   --pr-blue: #1e90ff;
   /* 灰色 */
-  --pr-gray: #c1c1c1;
+  --pr-gray: #f4f4f5;
   /* 原色 */
   --primary: #dad4cb;
   /* 克莱因蓝 */
@@ -30,6 +30,8 @@
   --black: #000000;
   /* 表格警告 */
   --table-danger: #f8d7da;
+  /* tip文字 */
+  --tip-color: #94979d;
 }
 
 /* flex布局 */
@@ -95,6 +97,10 @@ label {
   padding: 0.5rem;
   font-size: 0.8rem;
   cursor: pointer;
+}
+
+.btn:focus {
+  box-shadow: 3px 3px var(--primary);
 }
 
 /* 警告按钮 */
@@ -245,4 +251,30 @@ select {
 
 .table-danger {
   background-color: var(--table-danger);
+}
+
+/* 提示窗口 */
+.tip {
+  position: fixed;
+  color: var(--tip-color);
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--pr-gray);
+  border-radius: 10px;
+  z-index: 5;
+  animation: In 0.5s forwards;
+}
+
+@keyframes In {
+  0% {
+    opacity: 0;
+    top: 0%;
+  }
+
+  100% {
+    opacity: 1;
+    top: 2%;
+  }
 }
