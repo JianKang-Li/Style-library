@@ -6,6 +6,7 @@
 
 CDN引用
 `<link rel="stylesheet" href="https://jiankang-li.github.io/Style-library/css/LK.css">`
+`<link rel="stylesheet" href="https://jiankang-li.github.io/Style-library/js/LK.js">`
 
 ## 实现样式
 

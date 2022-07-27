@@ -117,6 +117,9 @@ label {
   border: 1px solid var(--danger);
 }
 
+
+/* 表单控件 */
+
 /* 表单输入框 */
 .LK-input {
   border: 1px solid var(--pr-gray);
@@ -224,6 +227,7 @@ select {
   border-radius: 1rem;
   background-color: var(--pr-blue);
 }
+
 
 /* 表格 */
 .LK-table {
