@@ -92,7 +92,7 @@ label {
   width: fit-content;
   vertical-align: middle;
   background-color: var(--pr-white);
-  border: 1px solid var(--pr-gray);
+  border: 1px solid var(--primary);
   border-radius: 5px;
   padding: 0.5rem;
   font-size: 0.8rem;
@@ -122,7 +122,7 @@ label {
 
 /* 表单输入框 */
 .LK-input {
-  border: 1px solid var(--pr-gray);
+  border: 1px solid var(--primary);
   padding: 0.37rem 0.75rem;
   font-size: 1rem;
   border-radius: 0.3rem;
@@ -144,7 +144,7 @@ select {
 
 /* 自定义样式 */
 .LK-select {
-  border: 1px solid var(--pr-gray);
+  border: 1px solid var(--primary);
   padding: 0.375rem 2.25rem 0.375rem 0.75rem;
   font-size: 1rem;
   border-radius: 0.3rem;
@@ -173,7 +173,7 @@ select {
 
 .LK-file {
   cursor: pointer;
-  border: 1px solid var(--pr-gray);
+  border: 1px solid var(--primary);
   width: 15rem;
   height: fit-content;
   font-size: 1rem;
