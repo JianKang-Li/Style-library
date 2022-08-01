@@ -7,7 +7,7 @@
   margin: 0;
   /* 初始化颜色 */
   /* 蓝色 */
-  --pr-blue: #1e90ff;
+  --pr-blue: #0d6efd;
   /* 灰色 */
   --pr-gray: #f4f4f5;
   /* 原色 */
@@ -39,6 +39,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+/* 连接 */
+.link-primary {
+  color: var(--pr-blue);
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.link-primary:hover {
+  color: var(--klein_blue);
+}
+
+.link-primary:focus {
+  color: var(--klein_blue);
 }
 
 /* 激活样式 */
@@ -99,9 +115,11 @@ label {
   cursor: pointer;
 }
 
-.btn:focus {
-  box-shadow: 3px 3px var(--primary);
+.btn:focus-within {
+  box-shadow: 0 0 4px var(--border);
 }
+
+
 
 /* 警告按钮 */
 .btn-warning {
@@ -281,4 +299,19 @@ select {
     opacity: 1;
     top: 2%;
   }
+}
+
+
+
+/* 自定义列表 */
+dl {
+  width: 100%;
+  text-align: left;
+}
+
+dt {
+  font-size: 1.5rem;
+  background-color: var(--pr-blue);
+  position: sticky;
+  top: 0;
 }
