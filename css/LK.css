@@ -122,6 +122,9 @@
   outline: none;
 }
 
+.btn:active {
+  transform: scale(0.98);
+}
 
 /* 警告按钮 */
 .btn-warning {
