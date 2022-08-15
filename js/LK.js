@@ -11,15 +11,9 @@ class Tip {
     tip.className = "tip";
     tip.innerText = message;
     document.body.appendChild(tip)
-    let _this = this
     setTimeout(() => {
-      _this._destory()
+      tip.remove()
     }, 3000)
-  }
-
-  _destory() {
-    let e = document.querySelector(".tip")
-    document.body.removeChild(e)
   }
 }
 

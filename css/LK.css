@@ -25,7 +25,7 @@
   /* 阴影 */
   --shadow: #ecf0f1;
   /* 边框 */
-  --border: #747d8c;
+  --border: #dfe4ea;
   /* 黑色 */
   --black: #000000;
   /* 表格警告 */
@@ -115,7 +115,10 @@
 }
 
 .btn:focus-within {
-  box-shadow: 0 0 4px var(--border);
+  box-shadow: 0px 0px 1px var(--border),
+    3px 3px 3px var(--border),
+    3px 3px 3px var(--border),
+    0px 0px 1px var(--border);
 }
 
 .btn:focus {
