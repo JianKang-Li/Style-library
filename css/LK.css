@@ -53,7 +53,7 @@
   color: var(--klein_blue);
 }
 
-.link-primary:focus {
+.link-primary:active {
   color: var(--klein_blue);
 }
 
@@ -63,17 +63,18 @@
 }
 
 /* label */
-label {
+.LK-lable {
   display: inline-block;
   font-size: 1.2rem;
   vertical-align: middle;
+  color: var(--tip-color);
 }
 
 /* 分割线 */
 .hr {
   border: 1px solid var(--pr-gray);
   height: 1px;
-  width: 90%;
+  width: 100%;
   background-color: var(--pr-gray);
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -92,16 +93,14 @@ label {
 /* 卡片 */
 .card {
   width: 15rem;
-  height: 10rem;
-  background-color: var(--pr-gray);
-  border-radius: 0.3rem;
-  padding: 1rem 1rem;
-  transition: all 0.5s;
+  height: 15rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.card:hover {
-  box-shadow: 4px 4px 5px 3px var(--shadow);
-}
 
 /* 按钮 */
 .btn {
@@ -119,6 +118,9 @@ label {
   box-shadow: 0 0 4px var(--border);
 }
 
+.btn:focus {
+  outline: none;
+}
 
 
 /* 警告按钮 */
@@ -149,12 +151,13 @@ label {
 
 .LK-input:focus {
   border: 1px solid var(--border);
+  outline: none;
 }
 
 /* select */
 
 /* 清除浏览器默认样式 */
-select {
+.LK-select {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -176,6 +179,7 @@ select {
 
 .LK-select:focus {
   border: 1px solid var(--border);
+  outline: none;
 }
 
 .LK-select option {
@@ -253,7 +257,7 @@ select {
   width: 100%;
   /* 边框合并 */
   border-collapse: collapse;
-  text-align: left;
+  text-align: center;
 }
 
 .LK-table thead tr {
@@ -271,7 +275,7 @@ select {
   padding: 0.5rem 0.5rem;
 }
 
-.table-danger {
+.tr-danger {
   background-color: var(--table-danger);
 }
 
@@ -286,10 +290,10 @@ select {
   background-color: var(--pr-gray);
   border-radius: 10px;
   z-index: 5;
-  animation: In 0.5s forwards;
+  animation: tip-In 0.5s forwards;
 }
 
-@keyframes In {
+@keyframes tip-In {
   0% {
     opacity: 0;
     top: 0%;
@@ -302,8 +306,20 @@ select {
 }
 
 
+/* 毛玻璃效果 */
+.frosted-glass {
+  width: 50%;
+  height: fit-content;
+  border-radius: 0.5rem;
+  text-align: center;
+  color: black;
+  font-size: 16px;
+  backdrop-filter: blur(4px);
+  background-color: var(--pr-gray);
+  opacity: 0.7;
+}
 
-/* 自定义列表 */
+/* 自定义列表(测试) */
 dl {
   width: 100%;
   text-align: left;
