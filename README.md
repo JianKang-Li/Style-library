@@ -5,8 +5,10 @@
 [在线预览](https://jiankang-li.github.io/Style-library/)
 
 CDN引用
-`<link rel="stylesheet" href="https://jiankang-li.github.io/Style-library/css/LK.css">`
-`<link rel="stylesheet" href="https://jiankang-li.github.io/Style-library/js/LK.js">`
+
+`<link rel="stylesheet" href="https://jiankang-li.github.io/Style-library/dist/static/css/index.css">`
+
+`<link rel="stylesheet" href="https://jiankang-li.github.io/Style-library/dist/static/js/index.js" defer>`
 
 ## 实现样式
 
