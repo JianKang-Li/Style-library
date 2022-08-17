@@ -1,0 +1,80 @@
+/* 图标 */
+.Li {
+  font-style: normal;
+  vertical-align: bottom;
+}
+
+/* ▶ */
+.Li-play::before {
+  content: "\25BA";
+}
+
+/* ♥ */
+.Li-heart::before {
+  content: "\2764";
+}
+
+/* ☀ */
+.Li-sun::before {
+  content: "\2600";
+}
+
+/* ⭐ */
+.Li-star::before {
+  content: "\2605";
+}
+
+/* 刷新 */
+.Li-rush::before {
+  content: "\27F3";
+}
+
+/* 左箭头 */
+.Li-left::before {
+  content: "\21E6";
+}
+
+/* 右箭头 */
+.Li-right::before {
+  content: "\21E8";
+}
+
+/* 上箭头 */
+.Li-up::before {
+  content: "\21E7";
+}
+
+/* 下箭头 */
+.Li-down::before {
+  content: "\21E9";
+}
+
+/* √ */
+.Li-hook::before {
+  content: "\2714";
+}
+
+/* × */
+.Li-error::before {
+  content: "\2716";
+}
+
+/* ❄ */
+.Li-snow::before {
+  content: "\2746";
+}
+
+/* ☎ */
+.Li-tel::before {
+  content: "\260E";
+}
+
+/* ✉ */
+.Li-email::before {
+  content: "\2709";
+}
+
+/* ✎ */
+.Li-edit::before {
+  content: "\270E";
+}
