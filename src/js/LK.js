@@ -5,7 +5,8 @@ class Tip {
     const div = document.createElement('div')
     div.classList.add("tip-container")
     this.div = div
-    document.querySelector("body").appendChild(div)
+    const body = document.body
+    body.appendChild(this.div)
   }
   info(message) {
     return this._tip(message, "info")
@@ -33,4 +34,7 @@ class Tip {
     }, 3000)
   }
 }
-window.$Tip = new Tip;
+
+window.onload = () => {
+  window.$Tip = new Tip;
+}
