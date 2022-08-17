@@ -5,8 +5,6 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/LK.css" />
-  <script src="./js/LK.js"></script>
   <title>LK-Style</title>
   <style>
     #hr {
@@ -15,6 +13,9 @@
 
     .container {
       background: url("https://github.com/JianKang-Li/Pics/blob/main/imgs/2022-8-10-2.jpg?raw=true");
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -25,6 +26,9 @@
 </head>
 
 <body>
+
+  <div class="LK-tag">标签</div>
+  <div class="split"></div>
 
   <div class="container">
     <label for="" class="LK-lable">毛玻璃</label>
@@ -121,23 +125,20 @@
   </div>
 
   <div>
-    <label for="">上传文件</label>
+    <label for="" class="LK-lable">上传文件</label>
     <input type="file" class="LK-file">
     <div class="split"></div>
   </div>
 
   <div>
-    <label for="">滑动条</label>
+    <label for="" class="LK-lable">滑动条</label>
     <input type="range" class="LK-range">
     <div class="split"></div>
   </div>
 
-
-
-
   <script>
     function add() {
-      $Tip.info("这是提示信息!")
+      $Tip.success("这是提示信息!")
     }
   </script>
 </body>

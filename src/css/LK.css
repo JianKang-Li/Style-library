@@ -21,7 +21,8 @@
   /* 危险 */
   --danger: #d7000f;
   /* 成功 */
-  --success: #2ecc71;
+  --success: #67c23a;
+  --success-bg: #f0f9eb;
   /* 阴影 */
   --shadow: #ecf0f1;
   /* 边框 */
@@ -32,6 +33,8 @@
   --table-danger: #f8d7da;
   /* tip文字 */
   --tip-color: #94979d;
+  /* 蓝色背景 */
+  --blue-bg: #ecf5ff;
 }
 
 /* flex布局 */
@@ -147,7 +150,7 @@
 /* 表单控件 */
 
 /* 表单输入框 */
-.LK-input {
+.LK-input[type="text"] {
   border: 1px solid var(--primary);
   padding: 0.37rem 0.75rem;
   font-size: 1rem;
@@ -155,8 +158,8 @@
   outline: none;
 }
 
-.LK-input:focus {
-  border: 1px solid var(--border);
+.LK-input[type="text"]:focus {
+  border: 1px solid var(--tip-color);
   outline: none;
 }
 
@@ -210,6 +213,10 @@
   background-color: var(--pr-white);
   border-radius: 0.3rem;
   margin: 0;
+}
+
+.LK-file:focus {
+  outline: none;
 }
 
 /* 文件上传按钮 */
@@ -267,7 +274,7 @@
 }
 
 .LK-table thead tr {
-  border-bottom: 1px solid var(--black);
+  border-bottom: 2px solid var(--black);
 }
 
 .LK-table tr {
@@ -286,17 +293,35 @@
 }
 
 /* 提示窗口 */
-.tip {
+.tip-container {
   position: fixed;
-  color: var(--tip-color);
+  top: 1rem;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.tip {
+  color: var(--tip-color);
   text-align: center;
+  margin-top: 0.3rem;
   padding: 0.5rem 1.5rem;
   background-color: var(--pr-gray);
   border-radius: 10px;
-  z-index: 5;
   animation: tip-In 0.5s forwards;
+}
+
+.tip.error {
+  background-color: var(--table-danger);
+  color: var(--danger);
+}
+
+.tip.success {
+  background-color: var(--success-bg);
+  color: var(--success);
 }
 
 @keyframes tip-In {
@@ -311,6 +336,17 @@
   }
 }
 
+
+/* 标签 */
+.LK-tag {
+  width: fit-content;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.3rem;
+  vertical-align: middle;
+  text-align: center;
+  background-color: var(--blue-bg);
+  color: var(--pr-blue);
+}
 
 /* 毛玻璃效果 */
 .frosted-glass {
