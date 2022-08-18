@@ -48,19 +48,44 @@
 
 
 /* 连接 */
-.link-primary {
+.LK-link {
   color: var(--pr-blue);
   text-decoration: none;
   vertical-align: middle;
 }
 
-.link-primary:hover {
+.LK-link:hover {
+  opacity: 0.8;
+}
+
+.LK-link:active {
   color: var(--klein_blue);
 }
 
-.link-primary:active {
-  color: var(--klein_blue);
+.link-danger {
+  color: var(--danger);
 }
+
+.link-danger:hover {
+  opacity: 0.8;
+}
+
+.link-danger:active {
+  color: var(--danger);
+}
+
+.link-success {
+  color: var(--success);
+}
+
+.link-success:hover {
+  opacity: 0.8;
+}
+
+.link-success:active {
+  color: var(--success);
+}
+
 
 /* 激活样式 */
 .active {
@@ -77,9 +102,8 @@
 
 /* 分割线 */
 .hr {
-  border: 1px solid var(--pr-gray);
   height: 1px;
-  width: 100%;
+  width: 90%;
   background-color: var(--pr-gray);
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -146,6 +170,12 @@
   color: var(--pr-white);
   background-color: var(--danger);
   border: 1px solid var(--danger);
+}
+
+.btn-success {
+  color: var(--pr-white);
+  background-color: var(--success);
+  border: 1px solid var(--success);
 }
 
 
@@ -285,6 +315,10 @@
   line-height: 2rem;
 }
 
+.LK-table tr:hover {
+  background-color: var(--blue-bg);
+}
+
 .LK-table td,
 .LK-table th {
   padding: 0.5rem 0.5rem;
@@ -348,6 +382,17 @@
   text-align: center;
   background-color: var(--blue-bg);
   color: var(--pr-blue);
+  display: inline-block;
+}
+
+.tag-success {
+  color: var(--success);
+  background-color: var(--success-bg);
+}
+
+.tag-error {
+  color: var(--danger);
+  background-color: var(--table-danger);
 }
 
 /* 毛玻璃效果 */

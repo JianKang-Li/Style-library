@@ -9,8 +9,10 @@
   <script src="./dist/static/js/index.js" defer></script>
   <title>LK-Style</title>
   <style>
-    #hr {
-      width: 100%;
+    body {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
     }
 
     .container {
@@ -22,145 +24,247 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 500px;
+      height: 20rem;
+      width: 100%;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: calc(9rem - 1px);
+      height: 100vh;
+      border-right: 1px solid var(--border);
+    }
+
+    .sidebar ul {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .sidebar li {
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      padding-left: 1rem;
+      height: 100px;
+    }
+
+    .sidebar li:hover {
+      background-color: var(--pr-gray);
+    }
+
+    main {
+      margin-left: 9.5rem;
+      padding: 0;
+      width: calc(100vw - 11rem);
+      scroll-behavior: smooth;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    main>div {
+
+      width: 100%;
+      margin-bottom: 3rem;
     }
   </style>
 </head>
 
 <body>
+  <aside class="sidebar">
+    <ul>
+      <li><a href="#hr" class="LK-link">分割线</a></li>
+      <li><a href="#card" class="LK-link">div卡片</a></li>
+      <li><a href="#btns" class="LK-link">按钮</a></li>
+      <li><a href="#input" class="LK-link">输入框</a></li>
+      <li><a href="#select" class="LK-link">下拉选项</a></li>
+      <li><a href="#file" class="LK-link">文件上传</a></li>
+      <li><a href="#range" class="LK-link">滑动块</a></li>
+      <li><a href="#table" class="LK-link">表格</a></li>
+      <li><a href="#tip" class="LK-link">alert提示</a></li>
+      <li><a href="#glass" class="LK-link">毛玻璃效果</a></li>
+      <li><a href="#links" class="LK-link">链接</a></li>
+      <li><a href="#tags" class="LK-link">tag</a></li>
+      <li><a href="#split" class="LK-link">空白分割</a></li>
+      <li><a href="#icons" class="LK-link">图标</a></li>
+    </ul>
+  </aside>
 
-  <div class="LK-tag">标签</div>
-  <div class="split"></div>
-
-  <div class="container">
-    <label for="" class="LK-lable">毛玻璃</label>
-    <div class="frosted-glass">
-      <h2>一个毛玻璃效果</h2>
+  <main>
+    <h2>LK-Style</h2>
+    <div id="hr">
+      <label for="" class="LK-lable">hr分割线</label>
+      <div class="hr"></div>
     </div>
-  </div>
-
-  <div>
-    <label for="" class="LK-lable">链接</label>
-    <a href="#" class="link-primary">链接</a>
-  </div>
 
 
-  <div>
-    <label for="" class="LK-lable">表格</label>
-    <table class="LK-table">
-      <thead>
-        <tr>
-          <th>列号</th>
-          <th>1</th>
-          <th>2</th>
+    <div id="card">
+      <label for="" class="LK-lable">div卡片</label>
+      <div class="hr"></div>
+      <div class="card"></div>
+    </div>
+
+    <div id="btns">
+      <label for="" class="LK-lable">按钮</label>
+      <div class="hr"></div>
+      <button class="btn">原始按钮</button>
+      <button class="btn btn-danger">危险按钮</button>
+      <button class="btn btn-warning">警告按钮</button>
+      <button class="btn btn-success">成功按钮</button>
+    </div>
+
+    <div id="input">
+      <label for="" class="LK-lable">输入框</label>
+      <div class="hr"></div>
+      <input type="text" class="LK-input">
+    </div>
+
+    <div id="select">
+      <label for="" class="LK-lable">下拉选项</label>
+      <div class="hr"></div>
+      <select class="LK-select">
+        <option selected>Open this select menu</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+
+    <div id="file">
+      <label for="" class="LK-lable">文件上传</label>
+      <div class="hr"></div>
+      <input type="file" class="LK-file">
+    </div>
+
+    <div id="range">
+      <label for="" class="LK-lable">滑动块</label>
+      <div class="hr"></div>
+      <input type="range" class="LK-range">
+    </div>
+
+
+    <div id="table">
+      <table class="LK-table">
+        <thead>
+          <tr>
+            <th>列号</th>
+            <th>1</th>
+            <th>2</th>
+          </tr>
+        </thead>
+        <tr class="tr-danger">
+          <td>行号</td>
+          <td>1-1</td>
+          <td>1-2</td>
         </tr>
-      </thead>
-      <tr class="tr-danger">
-        <td>行号</td>
-        <td>1-1</td>
-        <td>1-2</td>
-      </tr>
-      <tr>
-        <td>行号</td>
-        <td>2-1</td>
-        <td>2-2</td>
-      </tr>
-      <tr>
-        <td>行号</td>
-        <td>2-1</td>
-        <td>2-2</td>
-      </tr>
-      <tr>
-        <td>行号</td>
-        <td>2-1</td>
-        <td>2-2</td>
-      </tr>
-      <tr>
-        <td>行号</td>
-        <td>2-1</td>
-        <td>2-2</td>
-      </tr>
-    </table>
-    <div class="split"></div>
-  </div>
+        <tr>
+          <td>行号</td>
+          <td>2-1</td>
+          <td>2-2</td>
+        </tr>
+        <tr>
+          <td>行号</td>
+          <td>2-1</td>
+          <td>2-2</td>
+        </tr>
+        <tr>
+          <td>行号</td>
+          <td>2-1</td>
+          <td>2-2</td>
+        </tr>
+        <tr>
+          <td>行号</td>
+          <td>2-1</td>
+          <td>2-2</td>
+        </tr>
+      </table>
+    </div>
 
-  <button class="btn" onclick="add()">Tip提示窗</button>
+    <div id="tip">
+      <label for="" class="LK-lable">提示</label>
+      <div class="hr"></div>
+      <button class="btn" onclick="info()">info提示</button>
+      <button class="btn btn-success" onclick="success()">success提示</button>
+      <button class="btn btn-danger" onclick="error()">error提示</button>
+    </div>
 
-  <div id="hr">
-    <label for="hr" class="LK-lable">hr分割线</label>
-    <div class="hr"></div>
-  </div>
-
-  <div>
-    <div class="card" contenteditable="true">
-      <h2>Card title</h2>
-      <div>
-        Card context.
+    <div id="glass">
+      <label for="" class="LK-lable">毛玻璃</label>
+      <div class="hr"></div>
+      <div class="container">
+        <div class="frosted-glass">
+          <h2>一个毛玻璃效果</h2>
+        </div>
       </div>
     </div>
-    <div class="split"></div>
-  </div>
 
-  <div>
-    <label for="btn" class="LK-lable">按钮</label>
-    <button class="btn">原生按钮</button>
-    <button class="btn btn-warning">警告按钮</button>
-    <button class="btn btn-danger">错误按钮</button>
-    <div class="split"></div>
-  </div>
+    <div id="links">
+      <label for="" class="LK-lable">链接</label>
+      <div class="hr"></div>
+      <a href="#" class="LK-link">原始链接</a>
+      <a href="#" class="LK-link link-danger">危险链接</a>
+      <a href="#" class="LK-link link-success">成功链接</a>
+    </div>
 
-  <div>
-    <label for="btn" class="LK-lable">输入框</label>
-    <input type="text" name="" id="" class="LK-input">
-    <div class="split"></div>
-  </div>
+    <div id="tags">
+      <label for="" class="LK-lable">Tags</label>
+      <div class="hr"></div>
+      <div class="LK-tag">原始标签</div>
+      <div class="LK-tag tag-success">成功标签</div>
+      <div class="LK-tag tag-error">error</div>
+    </div>
 
-  <div class="btn-select">
-    <label for="" class="LK-lable">下拉选择</label>
-    <select class="LK-select">
-      <option selected>Open this select menu</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
-    </select>
-    <div class="split"></div>
-  </div>
+    <div id="split">
+      <label for="" class="LK-lable">空白分割</label>
+      <div class="hr"></div>
+      使用：
+      <pre>&lt;div class="split"&gt;&lt;/div&gt;</pre>
+    </div>
 
-  <div>
-    <label for="" class="LK-lable">上传文件</label>
-    <input type="file" class="LK-file">
-    <div class="split"></div>
-  </div>
+    <div id="icons">
+      <label for="" class="LK-lable">Icon</label>
+      <div class="hr"></div>
+      <i class="Li Li-sun"></i>
+      <i class="Li Li-rush"></i>
+      <i class="Li Li-star"></i>
+      <i class="Li Li-left"></i>
+      <i class="Li Li-right"></i>
+      <i class="Li Li-up"></i>
+      <i class="Li Li-down"></i>
+      <i class="Li Li-heart"></i>
+      <i class="Li Li-play"></i>
+      <i class="Li Li-hook"></i>
+      <i class="Li Li-error"></i>
+      <i class="Li Li-snow"></i>
+      <i class="Li Li-tel"></i>
+      <i class="Li Li-email"></i>
+      <i class="Li Li-edit"></i>
+    </div>
 
-  <div>
-    <label for="" class="LK-lable">滑动条</label>
-    <input type="range" class="LK-range">
-    <div class="split"></div>
-  </div>
-
-
-  <div>
-    <label for="" class="LK-lable">Icon</label>
-    <i class="Li Li-sun"></i>
-    <i class="Li Li-rush"></i>
-    <i class="Li Li-star"></i>
-    <i class="Li Li-left"></i>
-    <i class="Li Li-right"></i>
-    <i class="Li Li-up"></i>
-    <i class="Li Li-down"></i>
-    <i class="Li Li-heart"></i>
-    <i class="Li Li-play"></i>
-    <i class="Li Li-hook"></i>
-    <i class="Li Li-error"></i>
-    <i class="Li Li-snow"></i>
-    <i class="Li Li-tel"></i>
-    <i class="Li Li-email"></i>
-    <i class="Li Li-edit"></i>
-  </div>
+  </main>
 
   <script>
-    function add() {
-      $Tip.success("这是提示信息!")
+    function info() {
+      $Tip.info("这是提示信息!")
+    }
+
+    function success() {
+      $Tip.success("这是成功提示")
+    }
+
+    function error() {
+      $Tip.error("这是错误提示")
     }
   </script>
 </body>
