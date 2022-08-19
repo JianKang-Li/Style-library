@@ -408,6 +408,24 @@
   opacity: 0.7;
 }
 
+
+/* 代码块 */
+.LK-codes {
+  width: fit-content;
+  height: fit-content;
+  background: var(--pr-gray);
+  padding: 0rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.LK-codes pre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* 自定义列表(测试) */
 dl {
   width: 100%;

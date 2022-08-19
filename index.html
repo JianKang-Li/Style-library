@@ -128,6 +128,14 @@
     #menu.open .line2 {
       transform: rotate(765deg) translateY(-5.5px);
     }
+
+
+    .c-flex {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   </style>
 </head>
 
@@ -154,6 +162,7 @@
       <li><a href="#tags" class="LK-link">tag</a></li>
       <li><a href="#split" class="LK-link">空白分割</a></li>
       <li><a href="#icons" class="LK-link">图标</a></li>
+      <li><a href="#code" class="LK-link">代码块</a></li>
     </ul>
   </aside>
 
@@ -281,11 +290,14 @@
       <div class="LK-tag tag-error">error</div>
     </div>
 
-    <div id="split">
+    <div id="split" class="c-flex">
       <label for="" class="LK-lable">空白分割</label>
       <div class="hr"></div>
-      使用：
-      <pre>&lt;div class="split"&gt;&lt;/div&gt;</pre>
+      <div class="LK-codes">
+        <pre>
+          <code>&lt;div class="split"&gt;&lt;/div&gt;</code>
+        </pre>
+      </div>
     </div>
 
     <div id="icons">
@@ -306,6 +318,17 @@
       <i class="Li Li-tel"></i>
       <i class="Li Li-email"></i>
       <i class="Li Li-edit"></i>
+    </div>
+
+
+    <div id="code" class="c-flex">
+      <label for="" class="LK-lable">代码块</label>
+      <div class="hr"></div>
+      <div class="LK-codes">
+        <pre>
+          <code>npm i element-ui -S</code>
+        </pre>
+      </div>
     </div>
 
   </main>
