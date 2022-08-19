@@ -270,7 +270,7 @@
 }
 
 .LK-range {
-  width: 100%;
+  width: 10rem;
   height: 0.5em;
   vertical-align: middle;
   background-color: var(--shadow);

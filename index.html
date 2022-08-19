@@ -61,6 +61,11 @@
       background-color: var(--pr-gray);
     }
 
+    .sidebar.close {
+      visibility: hidden;
+      width: 0;
+    }
+
     main {
       margin-left: 9.5rem;
       padding: 0;
@@ -73,15 +78,66 @@
       align-items: center;
     }
 
-    main>div {
+    main.big {
+      margin-left: 0;
+      width: 100%;
+    }
 
+    main>div {
       width: 100%;
       margin-bottom: 3rem;
+    }
+
+    #menu {
+      border: 0;
+      cursor: pointer;
+      padding: 0;
+      position: fixed;
+      left: 9rem;
+      height: 30px;
+      width: 30px;
+    }
+
+    #menu:focus {
+      outline: 0;
+    }
+
+    #menu .line {
+      background-color: #5290f9;
+      height: 2px;
+      width: 20px;
+      position: absolute;
+      top: 10px;
+      left: 5px;
+      transition: transform 0.6s linear;
+    }
+
+    #menu .line2 {
+      top: auto;
+      bottom: 10px;
+    }
+
+    #menu.open {
+      left: 0;
+    }
+
+    #menu.open .line1 {
+      transform: rotate(-765deg) translateY(5.5px);
+    }
+
+    #menu.open .line2 {
+      transform: rotate(765deg) translateY(-5.5px);
     }
   </style>
 </head>
 
 <body>
+
+  <div id="menu">
+    <div class="line line1"></div>
+    <div class="line line2"></div>
+  </div>
+
   <aside class="sidebar">
     <ul>
       <li><a href="#hr" class="LK-link">分割线</a></li>
@@ -154,7 +210,7 @@
     </div>
 
 
-    <div id="table">
+    <div id="table" style="width: 100%;">
       <table class="LK-table">
         <thead>
           <tr>
@@ -266,6 +322,15 @@
     function error() {
       $Tip.error("这是错误提示")
     }
+
+    const menu = document.querySelector("#menu")
+    const siderbar = document.querySelector(".sidebar")
+    const main = document.querySelector("main")
+    menu.addEventListener("click", () => {
+      menu.classList.toggle("open");
+      siderbar.classList.toggle("close");
+      main.classList.toggle("big")
+    })
   </script>
 </body>
 
