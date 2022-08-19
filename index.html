@@ -93,7 +93,7 @@
       cursor: pointer;
       padding: 0;
       position: fixed;
-      left: 9rem;
+      left: 0;
       height: 30px;
       width: 30px;
     }
@@ -117,15 +117,15 @@
       bottom: 10px;
     }
 
-    #menu.open {
-      left: 0;
+    #menu.close {
+      left: 9rem;
     }
 
-    #menu.open .line1 {
+    #menu.close .line1 {
       transform: rotate(-765deg) translateY(5.5px);
     }
 
-    #menu.open .line2 {
+    #menu.close .line2 {
       transform: rotate(765deg) translateY(-5.5px);
     }
 
@@ -141,7 +141,7 @@
 
 <body>
 
-  <div id="menu">
+  <div id="menu" class="close">
     <div class="line line1"></div>
     <div class="line line2"></div>
   </div>
@@ -350,7 +350,7 @@
     const siderbar = document.querySelector(".sidebar")
     const main = document.querySelector("main")
     menu.addEventListener("click", () => {
-      menu.classList.toggle("open");
+      menu.classList.toggle("close");
       siderbar.classList.toggle("close");
       main.classList.toggle("big")
     })
