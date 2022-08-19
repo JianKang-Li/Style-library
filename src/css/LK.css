@@ -47,6 +47,7 @@
 }
 
 
+/* #region */
 /* 连接 */
 .LK-link {
   color: var(--pr-blue);
@@ -86,6 +87,7 @@
   color: var(--success);
 }
 
+/* #endregion */
 
 /* 激活样式 */
 .active {
@@ -131,6 +133,8 @@
 }
 
 
+
+/* #region */
 /* 按钮 */
 .btn {
   width: fit-content;
@@ -178,7 +182,10 @@
   border: 1px solid var(--success);
 }
 
+/* #endregion */
 
+
+/* #region */
 /* 表单控件 */
 
 /* 表单输入框 */
@@ -295,7 +302,10 @@
   background-color: var(--pr-blue);
 }
 
+/* #endregion */
 
+
+/* #region */
 /* 表格 */
 .LK-table {
   font-size: 1.2rem;
@@ -328,6 +338,10 @@
   background-color: var(--table-danger);
 }
 
+/* #endregion */
+
+
+/* #region */
 /* 提示窗口 */
 .tip-container {
   position: fixed;
@@ -372,7 +386,10 @@
   }
 }
 
+/* #endregion */
 
+
+/* #region */
 /* 标签 */
 .LK-tag {
   width: fit-content;
@@ -395,6 +412,8 @@
   background-color: var(--table-danger);
 }
 
+/* #endregion */
+
 /* 毛玻璃效果 */
 .frosted-glass {
   width: 50%;
@@ -409,6 +428,7 @@
 }
 
 
+/* #region */
 /* 代码块 */
 .LK-codes {
   width: fit-content;
@@ -425,6 +445,8 @@
   flex-direction: column;
   justify-content: center;
 }
+
+/* #endregion */
 
 /* 自定义列表(测试) */
 dl {
