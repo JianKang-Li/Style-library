@@ -8,7 +8,7 @@ CDN引用
 
 `<link rel="stylesheet" href="https://jiankang-li.github.io/Style-library/dist/static/css/index.css">`
 
-`<link rel="stylesheet" href="https://jiankang-li.github.io/Style-library/dist/static/js/index.js" defer>`
+`<script src="https://jiankang-li.github.io/Style-library/dist/static/js/index.js" defer></script>`
 
 ## 实现样式
 
