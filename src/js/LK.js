@@ -35,6 +35,6 @@ class Tip {
   }
 }
 
-window.onload = () => {
+window.addEventListener("load", () => {
   window.$Tip = new Tip;
-}
+})
