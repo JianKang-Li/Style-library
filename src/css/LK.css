@@ -234,6 +234,17 @@
   font-size: 1.1rem;
 }
 
+/* input:number */
+.LK-number {
+  width: 3rem;
+  height: 1.5rem;
+  border: 1px solid var(--border);
+}
+
+.LK-number:focus {
+  outline: none;
+}
+
 /* 文件上传input */
 .LK-file {
   appearance: none;
