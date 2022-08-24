@@ -90,6 +90,9 @@
     main>div {
       width: 100%;
       margin-bottom: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     #menu {
@@ -187,17 +190,21 @@
     <div id="btns">
       <label for="" class="LK-lable">按钮</label>
       <div class="hr"></div>
-      <button class="btn">原始按钮</button>
-      <button class="btn btn-danger">危险按钮</button>
-      <button class="btn btn-warning">警告按钮</button>
-      <button class="btn btn-success">成功按钮</button>
+      <div class="btns">
+        <button class="btn">原始按钮</button>
+        <button class="btn btn-danger">危险按钮</button>
+        <button class="btn btn-warning">警告按钮</button>
+        <button class="btn btn-success">成功按钮</button>
+      </div>
     </div>
 
     <div id="input">
       <label for="" class="LK-lable">输入框</label>
       <div class="hr"></div>
-      <input type="text" class="LK-input">
-      <input type="number" class="LK-number">
+      <div class="inputs">
+        <input type="text" class="LK-input">
+        <input type="number" class="LK-number">
+      </div>
     </div>
 
     <div id="select">
@@ -264,9 +271,11 @@
     <div id="tip">
       <label for="" class="LK-lable">提示</label>
       <div class="hr"></div>
-      <button class="btn" onclick="info()">info提示</button>
-      <button class="btn btn-success" onclick="success()">success提示</button>
-      <button class="btn btn-danger" onclick="error()">error提示</button>
+      <div class="btns">
+        <button class="btn" onclick="info()">info提示</button>
+        <button class="btn btn-success" onclick="success()">success提示</button>
+        <button class="btn btn-danger" onclick="error()">error提示</button>
+      </div>
     </div>
 
     <div id="glass">
@@ -282,17 +291,21 @@
     <div id="links">
       <label for="" class="LK-lable">链接</label>
       <div class="hr"></div>
-      <a href="#" class="LK-link">原始链接</a>
-      <a href="#" class="LK-link link-danger">危险链接</a>
-      <a href="#" class="LK-link link-success">成功链接</a>
+      <div class="links">
+        <a href="#" class="LK-link">原始链接</a>
+        <a href="#" class="LK-link link-danger">危险链接</a>
+        <a href="#" class="LK-link link-success">成功链接</a>
+      </div>
     </div>
 
     <div id="tags">
       <label for="" class="LK-lable">Tags</label>
       <div class="hr"></div>
-      <div class="LK-tag">原始标签</div>
-      <div class="LK-tag tag-success">成功标签</div>
-      <div class="LK-tag tag-error">error</div>
+      <div class="tags">
+        <div class="LK-tag">原始标签</div>
+        <div class="LK-tag tag-success">成功标签</div>
+        <div class="LK-tag tag-error">error</div>
+      </div>
     </div>
 
     <div id="split" class="c-flex">
@@ -308,21 +321,23 @@
     <div id="icons">
       <label for="" class="LK-lable">Icon</label>
       <div class="hr"></div>
-      <i class="Li Li-sun"></i>
-      <i class="Li Li-rush"></i>
-      <i class="Li Li-star"></i>
-      <i class="Li Li-left"></i>
-      <i class="Li Li-right"></i>
-      <i class="Li Li-up"></i>
-      <i class="Li Li-down"></i>
-      <i class="Li Li-heart"></i>
-      <i class="Li Li-play"></i>
-      <i class="Li Li-hook"></i>
-      <i class="Li Li-error"></i>
-      <i class="Li Li-snow"></i>
-      <i class="Li Li-tel"></i>
-      <i class="Li Li-email"></i>
-      <i class="Li Li-edit"></i>
+      <div class="icons">
+        <i class="Li Li-sun"></i>
+        <i class="Li Li-rush"></i>
+        <i class="Li Li-star"></i>
+        <i class="Li Li-left"></i>
+        <i class="Li Li-right"></i>
+        <i class="Li Li-up"></i>
+        <i class="Li Li-down"></i>
+        <i class="Li Li-heart"></i>
+        <i class="Li Li-play"></i>
+        <i class="Li Li-hook"></i>
+        <i class="Li Li-error"></i>
+        <i class="Li Li-snow"></i>
+        <i class="Li Li-tel"></i>
+        <i class="Li Li-email"></i>
+        <i class="Li Li-edit"></i>
+      </div>
     </div>
 
 
