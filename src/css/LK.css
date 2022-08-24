@@ -18,6 +18,7 @@
   --klein_blue: #002e9b;
   /* 警告 */
   --warning: #f5cd1b;
+  --warnbg: #fdf6ec;
   /* 白色 */
   --pr-white: #ffffff;
   /* 危险 */
@@ -236,9 +237,11 @@
 
 /* input:number */
 .LK-number {
-  width: 3rem;
+  width: 3.5rem;
   height: 1.5rem;
   border: 1px solid var(--border);
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.3rem;
 }
 
 .LK-number:focus {
@@ -352,8 +355,8 @@
 /* #endregion */
 
 
-/* #region */
 /* 提示窗口 */
+/* #region */
 .tip-container {
   position: fixed;
   top: 1rem;
@@ -400,8 +403,8 @@
 /* #endregion */
 
 
-/* #region */
 /* 标签 */
+/* #region */
 .LK-tag {
   width: fit-content;
   padding: 0.3rem 0.8rem;
@@ -423,6 +426,11 @@
   background-color: var(--table-danger);
 }
 
+.tag-warn {
+  color: var(--warning);
+  background-color: var(--warnbg);
+}
+
 /* #endregion */
 
 /* 毛玻璃效果 */
@@ -439,8 +447,8 @@
 }
 
 
-/* #region */
 /* 代码块 */
+/* #region */
 .LK-codes {
   width: fit-content;
   height: fit-content;
