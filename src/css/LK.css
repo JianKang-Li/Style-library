@@ -1,5 +1,7 @@
 @import url("./Icon.css");
 
+/* 初始化 */
+/* #region */
 :root {
   /* 字体初始化 */
   font-size: 16px;
@@ -40,6 +42,8 @@
   --blue-bg: #ecf5ff;
 }
 
+/* #endregion */
+
 /* flex布局 */
 .flex-layout {
   display: flex;
@@ -47,9 +51,8 @@
   justify-content: center;
 }
 
-
+/* 链接 */
 /* #region */
-/* 连接 */
 .LK-link {
   color: var(--pr-blue);
   text-decoration: none;
@@ -99,7 +102,7 @@
 .LK-lable {
   display: inline-block;
   font-size: 1.2rem;
-  vertical-align: middle;
+  vertical-align: bottom;
   color: var(--tip-color);
 }
 
@@ -107,7 +110,7 @@
 .hr {
   height: 1px;
   width: 90%;
-  background-color: var(--pr-gray);
+  background-color: var(--border);
   margin-top: 1rem;
   margin-bottom: 1rem;
   border-radius: 2px;
@@ -134,9 +137,8 @@
 }
 
 
-
-/* #region */
 /* 按钮 */
+/* #region */
 .btn {
   width: fit-content;
   vertical-align: middle;
@@ -186,8 +188,8 @@
 /* #endregion */
 
 
-/* #region */
 /* 表单控件 */
+/* #region */
 
 /* 表单输入框 */
 .LK-input {
@@ -318,9 +320,8 @@
 
 /* #endregion */
 
-
-/* #region */
 /* 表格 */
+/* #region */
 .LK-table {
   font-size: 1.2rem;
   width: 100%;
@@ -462,15 +463,45 @@
 
 /* #endregion */
 
-/* 自定义列表(测试) */
-dl {
-  width: 100%;
-  text-align: left;
+
+/* 开关 */
+/* #region */
+.LK-toggle {
+  vertical-align: bottom;
+  appearance: none;
+  height: 1rem;
+  width: 2rem;
+  cursor: pointer;
+  border: 1px solid var(--tip-color);
+  border-radius: 1rem;
+  position: relative;
+  padding-left: 1px;
 }
 
-dt {
-  font-size: 1.5rem;
-  background-color: var(--pr-blue);
-  position: sticky;
-  top: 0;
+.LK-toggle:checked {
+  border: 1px solid var(--black);
+}
+
+.LK-toggle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--tip-color);
+}
+
+.LK-toggle:checked:after {
+  background-color: var(--black);
+  right: 1px;
+}
+
+/* #endregion */
+
+/* 鼠标禁止 */
+.LK-disable {
+  cursor: not-allowed;
 }
