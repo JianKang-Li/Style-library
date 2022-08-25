@@ -476,10 +476,12 @@
   border-radius: 1rem;
   position: relative;
   padding-left: 1px;
+  outline: none;
 }
 
 .LK-toggle:checked {
   border: 1px solid var(--black);
+  outline: none;
 }
 
 .LK-toggle::after {
@@ -497,6 +499,7 @@
 .LK-toggle:checked:after {
   background-color: var(--black);
   right: 1px;
+  outline: none;
 }
 
 /* #endregion */
