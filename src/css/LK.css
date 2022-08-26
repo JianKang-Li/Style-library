@@ -494,12 +494,14 @@
   top: 50%;
   transform: translateY(-50%);
   background-color: var(--tip-color);
+  transition: 0.5s;
 }
 
 .LK-toggle:checked:after {
   background-color: var(--black);
-  right: 1px;
   outline: none;
+  transform-origin: center;
+  transform: translate(calc(1rem - 1px), -50%);
 }
 
 /* #endregion */
