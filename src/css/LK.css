@@ -40,6 +40,9 @@
   --tip-color: #94979d;
   /* 蓝色背景 */
   --blue-bg: #ecf5ff;
+
+  /* 与文字对齐 */
+  --vertical-align: center;
 }
 
 /* #endregion */
@@ -56,7 +59,7 @@
 .LK-link {
   color: var(--pr-blue);
   text-decoration: none;
-  vertical-align: middle;
+  vertical-align: var(--vertical-align);
 }
 
 .LK-link:hover {
@@ -102,7 +105,7 @@
 .LK-lable {
   display: inline-block;
   font-size: 1.2rem;
-  vertical-align: bottom;
+  vertical-align: var(--vertical-align);
   color: var(--tip-color);
 }
 
@@ -141,7 +144,7 @@
 /* #region */
 .btn {
   width: fit-content;
-  vertical-align: middle;
+  vertical-align: var(--vertical-align);
   background-color: var(--pr-white);
   border: 1px solid var(--primary);
   border-radius: 5px;
@@ -260,11 +263,11 @@
 .LK-file {
   cursor: pointer;
   border: 1px solid var(--primary);
-  width: 15rem;
+  width: 10rem;
   height: fit-content;
   font-size: 1rem;
   font-weight: 400;
-  vertical-align: middle;
+  vertical-align: var(--vertical-align);
   background-color: var(--pr-white);
   border-radius: 0.3rem;
   margin: 0;
@@ -295,7 +298,7 @@
 .LK-range {
   width: 10rem;
   height: 0.5em;
-  vertical-align: middle;
+  vertical-align: var(--vertical-align);
   background-color: var(--shadow);
   border-radius: 1rem;
 }
@@ -349,8 +352,12 @@
   padding: 0.5rem 0.5rem;
 }
 
-.tr-danger {
+.LK-table .tr-danger {
   background-color: var(--table-danger);
+}
+
+.LK-table .tr-danger:hover {
+  background-color: rgba(215, 0, 15, 0.7);
 }
 
 /* #endregion */
@@ -472,7 +479,7 @@
   height: 1rem;
   width: 2rem;
   cursor: pointer;
-  border: 1px solid var(--tip-color);
+  background-color: var(--tip-color);
   border-radius: 1rem;
   position: relative;
   padding-left: 1px;
@@ -480,7 +487,7 @@
 }
 
 .LK-toggle:checked {
-  border: 1px solid var(--black);
+  background-color: var(--pr-blue);
   outline: none;
 }
 
@@ -493,15 +500,19 @@
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
-  background-color: var(--tip-color);
+  background-color: var(--pr-white);
   transition: 0.5s;
 }
 
-.LK-toggle:checked:after {
-  background-color: var(--black);
+.LK-toggle:checked::after {
   outline: none;
   transform-origin: center;
   transform: translate(calc(1rem - 1px), -50%);
+}
+
+
+.LK-toggle.LK-green:checked {
+  background-color: var(--success);
 }
 
 /* #endregion */
@@ -510,3 +521,37 @@
 .LK-disable {
   cursor: not-allowed;
 }
+
+/* 单选框 */
+/* #region */
+.LK-radio {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 1px solid var(--tip-color);
+  position: relative;
+}
+
+.LK-radio::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.3rem;
+  background-color: var(--pr-white);
+}
+
+.LK-radio:checked {
+  border: 1px solid var(--pr-blue);
+}
+
+.LK-radio:checked::after {
+  background-color: var(--pr-blue);
+}
+
+/* #endregion */

@@ -2,6 +2,8 @@
 .Li {
   font-style: normal;
   vertical-align: bottom;
+  font-size: 1.5rem;
+  color: var(--pr-blue);
 }
 
 /* ▶ */
