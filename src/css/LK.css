@@ -250,6 +250,7 @@
 }
 
 .LK-number:focus {
+  border: 1px solid var(--tip-color);
   outline: none;
 }
 
