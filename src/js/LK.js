@@ -37,4 +37,24 @@ class Tip {
 
 window.addEventListener("load", () => {
   window.$Tip = new Tip;
+
+  // 实现tab切换
+  const LK_tabs = document.querySelectorAll(".LK-tab")
+  LK_tabs.forEach((item) => {
+    let list = item.querySelectorAll(".LK-tab>ul>li")
+    let contents = item.querySelectorAll(".LK-tab>.content>.item")
+    for (var i = 0; i < list.length; i++) {
+      list[i].onclick = function () {
+        for (var i = 0; i < list.length; i++) {
+          list[i].className = '';
+        }
+        this.className = 'current';
+        var index = this.getAttribute('data-index');
+        for (var i = 0; i < contents.length; i++) {
+          contents[i].style.display = 'none';
+        }
+        contents[index - 1].style.display = 'block';
+      }
+    }
+  })
 })
