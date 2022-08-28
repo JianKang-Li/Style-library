@@ -1,0 +1,38 @@
+/* 表格 */
+/* #region */
+.LK-table {
+  font-size: 1.2rem;
+  width: 100%;
+  /* 边框合并 */
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.LK-table thead tr {
+  border-bottom: 2px solid var(--black);
+}
+
+.LK-table tr {
+  width: 100%;
+  border-bottom: 1px solid var(--pr-gray);
+  line-height: 2rem;
+}
+
+.LK-table tr:hover {
+  background-color: var(--blue-bg);
+}
+
+.LK-table td,
+.LK-table th {
+  padding: 0.5rem 0.5rem;
+}
+
+.LK-table .tr-danger {
+  background-color: var(--table-danger);
+}
+
+.LK-table .tr-danger:hover {
+  background-color: rgba(215, 0, 15, 0.7);
+}
+
+/* #endregion */

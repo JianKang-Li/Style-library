@@ -1,0 +1,19 @@
+/* 代码块 */
+/* #region */
+.LK-codes {
+  width: fit-content;
+  height: fit-content;
+  background: var(--pr-gray);
+  padding: 0.3rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.LK-codes pre {
+  margin: 0;
+  height: fit-content;
+  white-space: pre-line;
+}
+
+/* #endregion */

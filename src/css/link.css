@@ -1,0 +1,41 @@
+/* 链接 */
+/* #region */
+.LK-link {
+  color: var(--pr-blue);
+  text-decoration: none;
+  vertical-align: var(--vertical-align);
+}
+
+.LK-link:hover {
+  opacity: 0.8;
+}
+
+.LK-link:active {
+  color: var(--klein_blue);
+}
+
+.link-danger {
+  color: var(--danger);
+}
+
+.link-danger:hover {
+  opacity: 0.8;
+}
+
+.link-danger:active {
+  color: var(--danger);
+}
+
+.link-success {
+  color: var(--success);
+}
+
+.link-success:hover {
+  opacity: 0.8;
+}
+
+.link-success:active {
+  color: var(--success);
+}
+
+/* #endregion */

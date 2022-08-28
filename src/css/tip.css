@@ -1,0 +1,46 @@
+/* 提示窗口 */
+/* #region */
+.tip-container {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.tip {
+  color: var(--tip-color);
+  text-align: center;
+  margin-top: 0.3rem;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--pr-gray);
+  border-radius: 10px;
+  animation: tip-In 0.5s forwards;
+}
+
+.tip.error {
+  background-color: var(--table-danger);
+  color: var(--danger);
+}
+
+.tip.success {
+  background-color: var(--success-bg);
+  color: var(--success);
+}
+
+@keyframes tip-In {
+  0% {
+    opacity: 0;
+    top: 0%;
+  }
+
+  100% {
+    opacity: 1;
+    top: 2%;
+  }
+}
+
+/* #endregion */

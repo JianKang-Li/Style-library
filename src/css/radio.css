@@ -1,0 +1,33 @@
+/* 单选框 */
+/* #region */
+.LK-radio {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 1px solid var(--tip-color);
+  position: relative;
+}
+
+.LK-radio::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.3rem;
+  background-color: var(--pr-white);
+}
+
+.LK-radio:checked {
+  border: 1px solid var(--pr-blue);
+}
+
+.LK-radio:checked::after {
+  background-color: var(--pr-blue);
+}
+
+/* #endregion */

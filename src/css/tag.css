@@ -1,0 +1,29 @@
+/* 标签 */
+/* #region */
+.LK-tag {
+  width: fit-content;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.3rem;
+  vertical-align: middle;
+  text-align: center;
+  background-color: var(--blue-bg);
+  color: var(--pr-blue);
+  display: inline-block;
+}
+
+.tag-success {
+  color: var(--success);
+  background-color: var(--success-bg);
+}
+
+.tag-error {
+  color: var(--danger);
+  background-color: var(--table-danger);
+}
+
+.tag-warn {
+  color: var(--warning);
+  background-color: var(--warnbg);
+}
+
+/* #endregion */

@@ -1,0 +1,132 @@
+/* 表单控件 */
+/* #region */
+
+/* 表单输入框 */
+.LK-input {
+  border: 1px solid var(--primary);
+  padding: 0.37rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  outline: none;
+}
+
+.LK-input:focus {
+  border: 1px solid var(--tip-color);
+  outline: none;
+}
+
+/* select */
+
+/* 清除浏览器默认样式 */
+.LK-select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+/* 自定义样式 */
+.LK-select {
+  border: 1px solid var(--primary);
+  padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  outline: none;
+  line-height: 1.4;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+}
+
+.LK-select:focus {
+  border: 1px solid var(--border);
+  outline: none;
+}
+
+.LK-select option {
+  font-size: 1.1rem;
+}
+
+/* input:number */
+.LK-number {
+  width: 3.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.3rem;
+}
+
+.LK-number:focus {
+  border: 1px solid var(--tip-color);
+  outline: none;
+}
+
+/* 文件上传input */
+.LK-file {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.LK-file {
+  cursor: pointer;
+  border: 1px solid var(--primary);
+  width: 10rem;
+  height: fit-content;
+  font-size: 1rem;
+  font-weight: 400;
+  vertical-align: var(--vertical-align);
+  background-color: var(--pr-white);
+  border-radius: 0.3rem;
+  margin: 0;
+}
+
+.LK-file:focus {
+  outline: none;
+}
+
+/* 文件上传按钮 */
+.LK-file::-webkit-file-upload-button {
+  cursor: pointer;
+  color: #212529;
+  border-width: 0;
+  line-height: 2rem;
+  background-color: var(--pr-blue);
+}
+
+/* 滑动条 */
+
+/* 清除默认样式 */
+.LK-range {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.LK-range {
+  width: 10rem;
+  height: 0.5em;
+  vertical-align: var(--vertical-align);
+  background-color: var(--shadow);
+  border-radius: 1rem;
+}
+
+/* 滑动块 */
+.LK-range::-webkit-slider-thumb {
+  /* 清除浏览器默认样式 */
+  -webkit-appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+  background-color: var(--pr-blue);
+}
+
+.LK-range::-moz-range-thumb {
+  -moz-appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+  background-color: var(--pr-blue);
+}
+
+/* #endregion */
