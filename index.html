@@ -9,7 +9,10 @@
   <script src="./dist/static/js/index.js" defer></script>
   <title>LK-Style</title>
   <style>
+    html,
     body {
+      width: 100%;
+      height: 100%;
       margin: 0;
       padding: 0;
     }
@@ -28,46 +31,18 @@
       align-items: center;
       justify-content: center;
       height: 20rem;
-      width: 100%;
+      width: 20rem;
     }
 
     .sidebar {
       position: fixed;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 1rem;
-      width: calc(9rem);
-      height: 90vh;
-      background-color: var(--pr-white);
-    }
-
-    .sidebar ul {
-      width: 100%;
-      height: 100%;
+      top: 0;
+      left: 0;
       padding: 0;
-      margin-block-start: 0;
-      margin-block-end: 0;
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .sidebar li {
-      border: 1px solid var(--border);
-      border-radius: 0.3rem;
-      border-collapse: collapse;
-      padding-left: 1rem;
-      height: 2rem;
-      line-height: 2rem;
-    }
-
-    .sidebar a {
-      display: block;
-      width: 100%;
-    }
-
-    .sidebar li:hover {
-      background-color: var(--pr-gray);
+      margin: 0;
+      width: fit-content;
+      height: 100vh;
+      z-index: 2;
     }
 
     .sidebar.close {
@@ -76,9 +51,6 @@
     }
 
     main {
-      margin-left: 9.5rem;
-      padding: 0;
-      width: calc(100vw - 12rem);
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -93,7 +65,7 @@
     }
 
     main>div {
-      width: 100%;
+      width: 80%;
       margin-bottom: 3rem;
       display: flex;
       flex-direction: column;
@@ -109,6 +81,7 @@
       left: 0;
       height: 30px;
       width: 30px;
+      z-index: 2;
     }
 
     #menu:focus {
@@ -122,7 +95,7 @@
       position: absolute;
       top: 10px;
       left: 5px;
-      transition: transform 0.6s linear;
+      transition: transform 0.3s linear;
     }
 
     #menu .line2 {
@@ -131,7 +104,7 @@
     }
 
     #menu.close {
-      left: 11rem;
+      left: 13rem;
     }
 
     #menu.close .line1 {
@@ -160,247 +133,602 @@
   </div>
 
   <aside class="sidebar close">
-    <ul>
-      <li><a href="#hr" class="LK-link">分割线</a></li>
-      <li><a href="#card" class="LK-link">div卡片</a></li>
-      <li><a href="#btns" class="LK-link">按钮</a></li>
-      <li><a href="#input" class="LK-link">输入框</a></li>
-      <li><a href="#select" class="LK-link">下拉选项</a></li>
-      <li><a href="#file" class="LK-link">文件上传</a></li>
-      <li><a href="#range" class="LK-link">滑动块</a></li>
-      <li><a href="#table" class="LK-link">表格</a></li>
-      <li><a href="#tip" class="LK-link">alert提示</a></li>
-      <li><a href="#glass" class="LK-link">毛玻璃效果</a></li>
-      <li><a href="#links" class="LK-link">链接</a></li>
-      <li><a href="#tags" class="LK-link">tag</a></li>
-      <li><a href="#split" class="LK-link">空白分割</a></li>
-      <li><a href="#icons" class="LK-link">图标</a></li>
-      <li><a href="#code" class="LK-link">代码块</a></li>
-      <li><a href="#toggles" class="LK-link">开关</a></li>
-      <li><a href="#radios" class="LK-link">单选</a></li>
-      <li><a href="#tab" class="LK-link">tab</a></li>
-      <li><a href="#progress" class="LK-link">进度条</a></li>
+    <ul class="LK-menu">
+      <li class="menu-item"><a href="#hr">分割线</a></li>
+      <li class="menu-item"><a href="#card">div卡片</a></li>
+      <li class="menu-item"><a href="#btns">按钮</a></li>
+      <li class="menu-item"><a href="#input">输入框</a></li>
+      <li class="menu-item"><a href="#select">下拉选项</a></li>
+      <li class="menu-item"><a href="#file">文件上传</a></li>
+      <li class="menu-item"><a href="#range">滑动块</a></li>
+      <li class="menu-item"><a href="#table">表格</a></li>
+      <li class="menu-item"><a href="#tip">alert提示</a></li>
+      <li class="menu-item"><a href="#glass">毛玻璃效果</a></li>
+      <li class="menu-item"><a href="#links">链接</a></li>
+      <li class="menu-item"><a href="#tags">tag</a></li>
+      <li class="menu-item"><a href="#split">空白分割</a></li>
+      <li class="menu-item"><a href="#icons">图标</a></li>
+      <li class="menu-item"><a href="#code">代码块</a></li>
+      <li class="menu-item"><a href="#toggles">开关</a></li>
+      <li class="menu-item"><a href="#radios">单选</a></li>
+      <li class="menu-item"><a href="#progress">进度条</a></li>
+      <li class="menu-item"><a href="#LK-menu">目录</a></li>
+      <li class="menu-item"><a href="#place">占位元素</a></li>
     </ul>
   </aside>
 
   <main class="big">
-    <h2>LK-Style</h2>
     <div id="hr">
-      <label for="" class="LK-lable">hr分割线</label>
-      <div class="hr"></div>
+      <label for="" class="LK-lable">分隔线</label>
+      <div class="LK-tab">
+        <ul>
+          <li data-index="1" class="current">预览</li>
+          <li data-index="2">HTML</li>
+        </ul>
+        <div class="content">
+          <div class="item">
+            <div class="hr" style="width: 30rem;background-color: white;"></div>
+          </div>
+          <div class="item">
+            <code>&lt;div class='hr' style="width: 30rem;background-color: white;"&gt;&lt;/div&gt;</code>
+          </div>
+        </div>
+      </div>
     </div>
 
 
     <div id="card">
       <label for="" class="LK-lable">div卡片</label>
-      <div class="hr"></div>
-      <div class="card"></div>
+      <div class="LK-tab">
+        <ul>
+          <li data-index="1" class="current">预览</li>
+          <li data-index="2">HTML</li>
+        </ul>
+        <div class="content" style="height:20rem ;">
+          <div class="item">
+            <div class="card"></div>
+          </div>
+          <div class="item">
+            <div class="LK-codes">
+              <code>&lt;div class='card'&gt;&lt;/div&gt;</code>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <div id="btns">
       <label for="" class="LK-lable">按钮</label>
-      <div class="hr"></div>
-      <div class="btns">
-        <button class="btn">原始按钮</button>
-        <button class="btn btn-danger">危险按钮</button>
-        <button class="btn btn-warning">警告按钮</button>
-        <button class="btn btn-success">成功按钮</button>
+      <div class="LK-tab">
+        <ul>
+          <li data-index="1" class="current">预览</li>
+          <li data-index="2">HTML</li>
+        </ul>
+        <div class="content">
+          <div class="item">
+            <div class="btns">
+              <button class="btn">原始按钮</button>
+              <button class="btn btn-danger">危险按钮</button>
+              <button class="btn btn-warning">警告按钮</button>
+              <button class="btn btn-success">成功按钮</button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="LK-codes">
+              <code>&lt;button class="btn"&gt;原始按钮&lt;/button&gt;</code><br>
+              <code>&lt;button class="btn btn-danger"&gt;危险按钮&lt;/button&gt;</code><br>
+              <code>&lt;button class="btn btn-warning"&gt;警告按钮&lt;/button&gt;</code><br>
+              <code>&lt;button class="btn btn-success"&gt;成功按钮&lt;/button&gt;</code><br>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <div id="input">
       <label for="" class="LK-lable">输入框</label>
-      <div class="hr"></div>
-      <div class="inputs">
-        <input type="text" class="LK-input">
-        <input type="number" class="LK-number">
+      <div class="LK-tab">
+        <ul>
+          <li data-index="1" class="current">预览</li>
+          <li data-index="2">HTML</li>
+        </ul>
+        <div class="content">
+          <div class="item">
+            <div class="inputs">
+              <input type="text" class="LK-input">
+              <input type="number" class="LK-number">
+            </div>
+          </div>
+          <div class="item">
+            <div class="LK-codes">
+              <code>&lt;input type="text" class="LK-input"/&gt;</code><br>
+              <code>&lt;input type="number" class="LK-number"/&gt;</code><br>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <div id="select">
       <label for="" class="LK-lable">下拉选项</label>
-      <div class="hr"></div>
-      <select class="LK-select">
-        <option selected>Open this select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-      </select>
-    </div>
-
-    <div id="file">
-      <label for="" class="LK-lable">文件上传</label>
-      <div class="hr"></div>
-      <input type="file" class="LK-file">
-    </div>
-
-    <div id="range">
-      <label for="" class="LK-lable">滑动块</label>
-      <div class="hr"></div>
-      <input type="range" class="LK-range" value="0">
-    </div>
-
-
-    <div id="table" style="width: 100%;">
-      <table class="LK-table">
-        <thead>
-          <tr>
-            <th>列号</th>
-            <th>1</th>
-            <th>2</th>
-          </tr>
-        </thead>
-        <tr class="tr-danger">
-          <td>行号</td>
-          <td>1-1</td>
-          <td>1-2</td>
-        </tr>
-        <tr>
-          <td>行号</td>
-          <td>2-1</td>
-          <td>2-2</td>
-        </tr>
-        <tr>
-          <td>行号</td>
-          <td>2-1</td>
-          <td>2-2</td>
-        </tr>
-        <tr>
-          <td>行号</td>
-          <td>2-1</td>
-          <td>2-2</td>
-        </tr>
-        <tr>
-          <td>行号</td>
-          <td>2-1</td>
-          <td>2-2</td>
-        </tr>
-      </table>
-    </div>
-
-    <div id="tip">
-      <label for="" class="LK-lable">提示</label>
-      <div class="hr"></div>
-      <div class="btns">
-        <button class="btn" onclick="info()">info提示</button>
-        <button class="btn btn-success" onclick="success()">success提示</button>
-        <button class="btn btn-danger" onclick="error()">error提示</button>
-      </div>
-    </div>
-
-    <div id="glass">
-      <label for="" class="LK-lable">毛玻璃</label>
-      <div class="hr"></div>
-      <div class="container">
-        <div class="frosted-glass">
-          <h2>毛玻璃效果</h2>
+      <div class="LK-tab">
+        <ul>
+          <li data-index="1" class="current">预览</li>
+          <li data-index="2">HTML</li>
+        </ul>
+        <div class="content" style="height: 8rem;">
+          <div class="item">
+            <select class="LK-select">
+              <option selected>Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <div class="item">
+            <div class="LK-codes">
+              &lt;select&nbsp;class=&quot;LK-select&quot;&gt;<br>
+              &lt;option&nbsp;selected&gt;Open&nbsp;this&nbsp;select&nbsp;menu&lt;/option&gt;<br>
+              &lt;option&nbsp;value=&quot;1&quot;&gt;One&lt;/option&gt;<br>
+              &lt;option&nbsp;value=&quot;2&quot;&gt;Two&lt;/option&gt;<br>
+              &lt;option&nbsp;value=&quot;3&quot;&gt;Three&lt;/option&gt;<br>
+              &lt;/select&gt;
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
+    <div id="file">
+      <label for="" class="LK-lable">文件上传</label>
+      <div class="LK-tab">
+        <ul>
+          <li data-index="1" class="current">预览</li>
+          <li data-index="2">HTML</li>
+        </ul>
+        <div class="content">
+          <div class="item">
+            <input type="file" class="LK-file">
+          </div>
+          <div class="item">
+            <div class="LK-codes">
+              &lt;input&nbsp;type=&quot;file&quot;&nbsp;class=&quot;LK-file&quot;&gt;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="range">
+      <label for="" class="LK-lable">滑动块</label>
+      <div class="LK-tab">
+        <ul>
+          <li data-index="1" class="current">预览</li>
+          <li data-index="2">HTML</li>
+        </ul>
+        <div class="content">
+          <div class="item">
+            <input type="range" class="LK-range" value="0">
+          </div>
+          <div class="item">
+            <div class="LK-codes">
+              &lt;input&nbsp;type=&quot;range&quot;&nbsp;class=&quot;LK-range&quot;&nbsp;value=&quot;0&quot;&gt;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="table">
+      <label for="" class="LK-lable">表格</label>
+      <div class="LK-tab">
+        <ul>
+          <li data-index="1" class="current">预览</li>
+          <li data-index="2">HTML</li>
+        </ul>
+        <div class="content" style="height:22rem ;">
+          <div class="item">
+            <table class="LK-table">
+              <thead>
+                <tr>
+                  <th>列号</th>
+                  <th>1</th>
+                  <th>2</th>
+                  <th>3</th>
+                  <th>4</th>
+                  <th>5</th>
+                </tr>
+              </thead>
+              <tr class="tr-danger">
+                <td>行号</td>
+                <td>1-1</td>
+                <td>1-2</td>
+                <td>1-3</td>
+                <td>1-4</td>
+                <td>1-5</td>
+              </tr>
+              <tr>
+                <td>行号</td>
+                <td>2-1</td>
+                <td>2-2</td>
+                <td>2-3</td>
+                <td>2-4</td>
+                <td>2-5</td>
+              </tr>
+            </table>
+          </div>
+          <div class="item">
+            <div class="LK-codes">
+              &lt;table&nbsp;class=&quot;LK-table&quot;&gt;<br>
+              &lt;thead&gt;<br>&lt;tr&gt;<br>&lt;th&gt;列号&lt;/th&gt;<br>
+              &lt;th&gt;1&lt;/th&gt;<br>
+              &lt;th&gt;2&lt;/th&gt;<br>
+              &lt;/tr&gt;<br>&lt;/thead&gt;<br>
+              &lt;tr&nbsp;class=&quot;tr-danger&quot;&gt;<br>
+              &lt;td&gt;行号&lt;/td&gt;<br>
+              &lt;td&gt;1-1&lt;/td&gt;<br>
+              &lt;td&gt;1-2&lt;/td&gt;<br>
+              &lt;/tr&gt;<br>&lt;tr&gt;<br>
+              &lt;td&gt;行号&lt;/td&gt;<br>
+              &lt;td&gt;2-1&lt;/td&gt;<br>
+              &lt;td&gt;2-2&lt;/td&gt;<br>
+              &lt;/tr&gt;<br>
+              &lt;/table&gt;
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="tip">
+      <label for="" class="LK-lable">提示</label>
+      <div class="LK-tab">
+        <ul>
+          <li data-index="1" class="current">预览</li>
+          <li data-index="2">HTML</li>
+        </ul>
+        <div class="content" style="height:10rem ;">
+          <div class="item">
+            <div class="btns">
+              <button class="btn" onclick="info()">info提示</button>
+              <button class="btn btn-success" onclick="success()">success提示</button>
+              <button class="btn btn-danger" onclick="error()">error提示</button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="LK-codes">
+              &lt;div&nbsp;class=&quot;btns&quot;&gt;<br>
+              &lt;button&nbsp;class=&quot;btn&quot;&nbsp;onclick=&quot;info()&quot;&gt;info提示&lt;/button&gt;<br>
+              &lt;button&nbsp;class=&quot;btn&nbsp;btn-success&quot;&nbsp;onclick=&quot;success()&quot;&gt;success提示&lt;/button&gt;<br>
+              &lt;button&nbsp;class=&quot;btn&nbsp;btn-danger&quot;&nbsp;onclick=&quot;error()&quot;&gt;error提示&lt;/button&gt;<br>
+              &lt;/div&gt;
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="glass">
+      <label for="" class="LK-lable">毛玻璃</label>
+      <div class="LK-tab">
+        <ul>
+          <li data-index="1" class="current">预览</li>
+          <li data-index="2">HTML</li>
+        </ul>
+        <div class="content" style="height:20rem ;">
+          <div class="item">
+            <div class="container">
+              <div class="frosted-glass">
+                <h2>毛玻璃效果</h2>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="LK-codes">
+              &lt;div&nbsp;class=&quot;container&quot;&gt;<br>
+              &lt;div&nbsp;class=&quot;frosted-glass&quot;&gt;<br>
+              &lt;h2&gt;毛玻璃效果&lt;/h2&gt;<br>
+              &lt;/div&gt;<br>
+              &lt;/div&gt;
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
     <div id="links">
       <label for="" class="LK-lable">链接</label>
-      <div class="hr"></div>
-      <div class="links">
-        <a href="#" class="LK-link">原始链接</a>
-        <a href="#" class="LK-link link-danger">危险链接</a>
-        <a href="#" class="LK-link link-success">成功链接</a>
+      <div class="LK-tab">
+        <ul>
+          <li data-index="1" class="current">预览</li>
+          <li data-index="2">HTML</li>
+        </ul>
+        <div class="content">
+          <div class="item">
+            <div class="links">
+              <a href="#" class="LK-link">原始链接</a>
+              <a href="#" class="LK-link link-danger">危险链接</a>
+              <a href="#" class="LK-link link-success">成功链接</a>
+            </div>
+          </div>
+          <div class="item">
+            <div class="LK-codes">
+              &lt;div&nbsp;class=&quot;links&quot;&gt;<br>
+              &lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;LK-link&quot;&gt;原始链接&lt;/a&gt;<br>
+              &lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;LK-link&nbsp;link-danger&quot;&gt;危险链接&lt;/a&gt;<br>
+              &lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;LK-link&nbsp;link-success&quot;&gt;成功链接&lt;/a&gt;<br>
+              &lt;/div&gt;
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <div id="tags">
       <label for="" class="LK-lable">Tags</label>
-      <div class="hr"></div>
-      <div class="tags">
-        <div class="LK-tag">原始标签</div>
-        <div class="LK-tag tag-success">成功</div>
-        <div class="LK-tag tag-error">错误</div>
-        <div class="LK-tag tag-warn">警告</div>
+      <div class="LK-tab">
+        <ul>
+          <li data-index="1" class="current">预览</li>
+          <li data-index="2">HTML</li>
+        </ul>
+        <div class="content" style="height: 8rem;">
+          <div class="item">
+            <div class="tags">
+              <div class="LK-tag">原始标签</div>
+              <div class="LK-tag tag-success">成功</div>
+              <div class="LK-tag tag-error">错误</div>
+              <div class="LK-tag tag-warn">警告</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="LK-codes">
+              &lt;div&nbsp;class=&quot;tags&quot;&gt;<br>
+              &lt;div&nbsp;class=&quot;LK-tag&quot;&gt;原始标签&lt;/div&gt;<br>
+              &lt;div&nbsp;class=&quot;LK-tag&nbsp;tag-success&quot;&gt;成功&lt;/div&gt;<br>
+              &lt;div&nbsp;class=&quot;LK-tag&nbsp;tag-error&quot;&gt;错误&lt;/div&gt;<br>
+              &lt;div&nbsp;class=&quot;LK-tag&nbsp;tag-warn&quot;&gt;警告&lt;/div&gt;<br>
+              &lt;/div&gt;
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <div id="split" class="c-flex">
       <label for="" class="LK-lable">空白分割</label>
-      <div class="hr"></div>
-      <div class="LK-codes">
-        <code>&lt;div class="split"&gt;&lt;/div&gt;</code>
+      <div class="LK-tab">
+        <ul>
+          <li data-index="1" class="current">预览</li>
+          <li data-index="2">HTML</li>
+        </ul>
+        <div class="content">
+          <div class="item">
+            <div class="split"></div>
+          </div>
+          <div class="item">
+            <div class="LK-codes">
+              <code>&lt;div class="split"&gt;&lt;/div&gt;</code>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <div id="icons">
       <label for="" class="LK-lable">Icon</label>
-      <div class="hr"></div>
-      <div class="icons">
-        <i class="Li Li-sun"></i>
-        <i class="Li Li-rush"></i>
-        <i class="Li Li-star"></i>
-        <i class="Li Li-left"></i>
-        <i class="Li Li-right"></i>
-        <i class="Li Li-up"></i>
-        <i class="Li Li-down"></i>
-        <i class="Li Li-heart"></i>
-        <i class="Li Li-play"></i>
-        <i class="Li Li-hook"></i>
-        <i class="Li Li-error"></i>
-        <i class="Li Li-snow"></i>
-        <i class="Li Li-tel"></i>
-        <i class="Li Li-email"></i>
-        <i class="Li Li-edit"></i>
+      <div class="LK-tab">
+        <ul>
+          <li data-index="1" class="current">预览</li>
+          <li data-index="2">HTML</li>
+        </ul>
+        <div class="content" style="height: 20rem;">
+          <div class="item">
+            <div class="icons">
+              <i class="Li Li-sun"></i>
+              <i class="Li Li-rush"></i>
+              <i class="Li Li-star"></i>
+              <i class="Li Li-left"></i>
+              <i class="Li Li-right"></i>
+              <i class="Li Li-up"></i>
+              <i class="Li Li-down"></i>
+              <i class="Li Li-heart"></i>
+              <i class="Li Li-play"></i>
+              <i class="Li Li-hook"></i>
+              <i class="Li Li-error"></i>
+              <i class="Li Li-snow"></i>
+              <i class="Li Li-tel"></i>
+              <i class="Li Li-email"></i>
+              <i class="Li Li-edit"></i>
+            </div>
+          </div>
+          <div class="item">
+            <div class="LK-codes">
+              &lt;div&nbsp;class=&quot;icons&quot;&gt;<br>
+              &lt;i&nbsp;class=&quot;Li&nbsp;Li-sun&quot;&gt;&lt;/i&gt;<br>
+              &lt;i&nbsp;class=&quot;Li&nbsp;Li-rush&quot;&gt;&lt;/i&gt;<br>
+              &lt;i&nbsp;class=&quot;Li&nbsp;Li-star&quot;&gt;&lt;/i&gt;<br>
+              &lt;i&nbsp;class=&quot;Li&nbsp;Li-left&quot;&gt;&lt;/i&gt;<br>
+              &lt;i&nbsp;class=&quot;Li&nbsp;Li-right&quot;&gt;&lt;/i&gt;<br>
+              &lt;i&nbsp;class=&quot;Li&nbsp;Li-up&quot;&gt;&lt;/i&gt;<br>
+              &lt;i&nbsp;class=&quot;Li&nbsp;Li-down&quot;&gt;&lt;/i&gt;<br>
+              &lt;i&nbsp;class=&quot;Li&nbsp;Li-heart&quot;&gt;&lt;/i&gt;<br>
+              &lt;i&nbsp;class=&quot;Li&nbsp;Li-play&quot;&gt;&lt;/i&gt;<br>
+              &lt;i&nbsp;class=&quot;Li&nbsp;Li-hook&quot;&gt;&lt;/i&gt;<br>
+              &lt;i&nbsp;class=&quot;Li&nbsp;Li-error&quot;&gt;&lt;/i&gt;<br>
+              &lt;i&nbsp;class=&quot;Li&nbsp;Li-snow&quot;&gt;&lt;/i&gt;<br>
+              &lt;i&nbsp;class=&quot;Li&nbsp;Li-tel&quot;&gt;&lt;/i&gt;<br>
+              &lt;i&nbsp;class=&quot;Li&nbsp;Li-email&quot;&gt;&lt;/i&gt;<br>
+              &lt;i&nbsp;class=&quot;Li&nbsp;Li-edit&quot;&gt;&lt;/i&gt;<br>
+              &lt;/div&gt;
+            </div>
+          </div>
+        </div>
       </div>
+
     </div>
 
 
     <div id="code" class="c-flex">
       <label for="" class="LK-lable">代码块</label>
-      <div class="hr"></div>
-      <div class="LK-codes">
-        <code>npm i element-ui -S</code>
+      <div class="LK-tab">
+        <ul>
+          <li data-index="1" class="current">预览</li>
+          <li data-index="2">HTML</li>
+        </ul>
+        <div class="content">
+          <div class="item">
+            <div class="LK-codes">
+              <code>npm i element-ui -S</code>
+            </div>
+          </div>
+          <div class="item">
+            <div class="LK-codes">
+              &lt;div&nbsp;class=&quot;LK-codes&quot;&gt;<br>
+              &lt;code&gt;npm&nbsp;i&nbsp;element-ui&nbsp;-S&lt;/code&gt;<br>
+              &lt;/div&gt;
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
 
     <div id="toggles">
       <label for="" class="LK-lable">开关</label>
-      <div class="hr"></div>
-      <div>
-        <input type="checkbox" class="LK-toggle">toggle
-        <label for="" class="LK-lable">开关</label>
-        <input type="checkbox" class="LK-toggle LK-green">460
+      <div class="LK-tab">
+        <ul>
+          <li data-index="1" class="current">预览</li>
+          <li data-index="2">HTML</li>
+        </ul>
+        <div class="content">
+          <div class="item">
+            <div>
+              <input type="checkbox" class="LK-toggle">toggle
+              <label for="" class="LK-lable">开关</label>
+              <input type="checkbox" class="LK-toggle LK-green">460
+            </div>
+          </div>
+          <div class="item">
+            <div class="LK-codes">
+              &lt;div&gt;<br>
+              &lt;input&nbsp;type=&quot;checkbox&quot;&nbsp;class=&quot;LK-toggle&quot;&gt;toggle<br>
+              &lt;label&nbsp;for=&quot;&quot;&nbsp;class=&quot;LK-lable&quot;&gt;开关&lt;/label&gt;<br>
+              &lt;input&nbsp;type=&quot;checkbox&quot;&nbsp;class=&quot;LK-toggle&nbsp;LK-green&quot;&gt;460<br>
+              &lt;/div&gt;
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
 
     <div id="radios">
       <label for="" class="LK-lable">单选</label>
-      <div class="hr"></div>
-      <div>
-        <input type="radio" class="LK-radio" name="ljk">213
-        <input type="radio" class="LK-radio" name="ljk">038
-      </div>
-    </div>
-
-
-    <div id="tab">
-      <label for="" class="LK-lable">选项卡</label>
-      <div class="hr"></div>
       <div class="LK-tab">
         <ul>
-          <li data-index="1" class="current">1</li>
-          <li data-index="2">2</li>
-          <li data-index="3">3</li>
+          <li data-index="1" class="current">预览</li>
+          <li data-index="2">HTML</li>
         </ul>
         <div class="content">
-          <div class="item">这是1的内容</div>
-          <div class="item">这是2的内容</div>
-          <div class="item">这是3的内容</div>
+          <div class="item">
+            <div>
+              <input type="radio" class="LK-radio" name="ljk">213
+              <input type="radio" class="LK-radio" name="ljk">038
+            </div>
+          </div>
+          <div class="item">
+            <div class="LK-codes">
+              &lt;div&gt;<br>
+              &lt;input&nbsp;type=&quot;radio&quot;&nbsp;class=&quot;LK-radio&quot;&nbsp;name=&quot;ljk&quot;&gt;213<br>
+              &lt;input&nbsp;type=&quot;radio&quot;&nbsp;class=&quot;LK-radio&quot;&nbsp;name=&quot;ljk&quot;&gt;038<br>
+              &lt;/div&gt;
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
+
     <div id="progress">
-      <progress value="10" max="100" class="LK-progress"></progress>
+      <label for="" class="LK-lable">进度条</label>
+      <div class="LK-tab">
+        <ul>
+          <li data-index="1" class="current">预览</li>
+          <li data-index="2">HTML</li>
+        </ul>
+        <div class="content">
+          <div class="item">
+            <progress value="10" max="100" class="LK-progress"></progress>
+          </div>
+          <div class="item">
+            <div class="LK-codes">
+              &nbsp;&lt;progress&nbsp;value=&quot;10&quot;&nbsp;max=&quot;100&quot;&nbsp;class=&quot;LK-progress&quot;&gt;&lt;/progress&gt;
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
+    <div id="LK-menu">
+      <label for="" class="LK-lable">目录</label>
+      <div class="LK-tab">
+        <ul>
+          <li data-index="1" class="current">预览</li>
+          <li data-index="2">HTML</li>
+        </ul>
+        <div class="content" style="height: 15rem;">
+          <div class="item">
+            <ul class="LK-menu">
+              <li class="menu-item"><a href="">item1</a></li>
+              <li class="menu-item"><a href="">item2</a></li>
+              <li class="menu-title"><span>categroy</span></li>
+              <li class="menu-item"><a href="">item3</a></li>
+              <li class="menu-item"><a href="">item4</a></li>
+            </ul>
+          </div>
+          <div class="item">
+            <div class="LK-codes">
+              &lt;ul&nbsp;class=&quot;LK-menu&quot;&gt;<br>
+              &lt;li&nbsp;class=&quot;menu-item&quot;&gt;&lt;a&nbsp;href=&quot;&quot;&gt;item1&lt;/a&gt;&lt;/li&gt;<br>
+              &lt;li&nbsp;class=&quot;menu-item&quot;&gt;&lt;a&nbsp;href=&quot;&quot;&gt;item2&lt;/a&gt;&lt;/li&gt;<br>
+              &lt;li&nbsp;class=&quot;menu-title&quot;&gt;&lt;span&gt;categroy&lt;/span&gt;&lt;/li&gt;<br>
+              &lt;li&nbsp;class=&quot;menu-item&quot;&gt;&lt;a&nbsp;href=&quot;&quot;&gt;item3&lt;/a&gt;&lt;/li&gt;<br>
+              &lt;li&nbsp;class=&quot;menu-item&quot;&gt;&lt;a&nbsp;href=&quot;&quot;&gt;item4&lt;/a&gt;&lt;/li&gt;<br>
+              &lt;/ul&gt;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="place">
+      <label for="" class="LK-lable">占位元素</label>
+      <div class="LK-tab">
+        <ul>
+          <li data-index="1" class="current">预览</li>
+          <li data-index="2">HTML</li>
+        </ul>
+        <div class="content">
+          <div class="item">
+            <div class="place place-bg">
+            </div>
+          </div>
+          <div class="item">
+            <div class="LK-codes">
+              &lt;div&nbsp;class=&quot;place&nbsp;place-bg&quot;&gt;<br>
+              &lt;/div&gt;
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </main>
 
   <script>
@@ -422,7 +750,7 @@
     menu.addEventListener("click", () => {
       menu.classList.toggle("close");
       siderbar.classList.toggle("close");
-      main.classList.toggle("big")
+      main.classList.toggle("big");
     })
   </script>
 </body>

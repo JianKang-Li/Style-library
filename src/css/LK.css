@@ -10,6 +10,8 @@
 @import url("./tag.css");
 @import url("./codes.css");
 @import url("./progress.css");
+@import url("./menu.css");
+@import url("./place.css");
 
 /* 初始化 */
 /* #region */
@@ -80,7 +82,7 @@
 
 /* 分割线 */
 .hr {
-  height: 1px;
+  height: 3px;
   width: 90%;
   background-color: var(--border);
   margin-top: 1rem;
@@ -106,6 +108,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--pr-white);
 }
 
 

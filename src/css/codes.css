@@ -4,10 +4,11 @@
   width: fit-content;
   height: fit-content;
   background: var(--pr-gray);
-  padding: 0.3rem 1rem;
+  padding: 0.3rem 1rem 0.3rem 0;
   border: 1px solid var(--border);
   border-radius: 0.5rem;
   font-size: 1rem;
+  text-align: left;
 }
 
 .LK-codes pre {

@@ -1,47 +1,52 @@
 /* tab选项卡 */
 /* #region */
 .LK-tab {
-  width: 15rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  --bg-color: var(--primary)
 }
 
-.LK-tab ul {
+.LK-tab>ul {
   margin-block-start: 0;
   display: flex;
   list-style: none;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   width: 100%;
   height: fit-content;
   padding: 0;
   margin: 0;
 }
 
-.LK-tab ul li {
-  flex: 1;
+.LK-tab>ul li {
+  width: fit-content;
   text-align: center;
-  padding: 0.2rem 0;
-  border-top-left-radius: 0.3rem;
-  border-top-right-radius: 0.3rem;
+  padding: 1rem 1rem 0.3rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
   cursor: pointer;
 }
 
-.LK-tab ul li.current {
-  background-color: #eee;
+.LK-tab>ul li.current {
+  background-color: var(--bg-color);
   color: #3498db;
 }
 
-.LK-tab ul li:hover {
+.LK-tab>ul li:hover {
   color: #3498db;
 }
 
 .LK-tab .content {
   width: 100%;
-  height: max-content;
-  background-color: #eee;
+  height: 5rem;
+  background-color: var(--bg-color);
   text-align: center;
   padding: 1rem 0;
-  border-bottom-right-radius: 0.3rem;
-  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .LK-tab .item:nth-child(n+2) {
