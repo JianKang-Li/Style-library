@@ -12,10 +12,7 @@
 }
 
 .btn:focus-within {
-  box-shadow: 0px 0px 1px var(--border),
-    3px 3px 3px var(--border),
-    3px 3px 3px var(--border),
-    0px 0px 1px var(--border);
+  opacity: 0.7;
 }
 
 .btn:focus {
