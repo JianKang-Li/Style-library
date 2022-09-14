@@ -12,7 +12,7 @@
 }
 
 .btn:focus-within {
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .btn:focus {
