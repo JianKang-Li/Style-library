@@ -129,3 +129,24 @@
 .LK-disable {
   cursor: not-allowed;
 }
+
+/* 单行文本溢出显示省略号,设置高度 */
+.LK-pell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.LK-Multiline {
+  position: relative;
+  overflow: hidden;
+}
+
+.LK-Multiline::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: '...';
+  padding-left: 40px;
+  background-image: linear-gradient(to right, transparent, var(--bg-color) 70%);
+}

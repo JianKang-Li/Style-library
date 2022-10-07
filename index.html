@@ -122,6 +122,17 @@
       justify-content: center;
       align-items: center;
     }
+
+    /* 文本溢出 */
+    .LK-Multiline {
+      width: 200px;
+      height: 150px;
+      line-height: 50px;
+    }
+
+    .LK-pell {
+      width: 100px;
+    }
   </style>
 </head>
 
@@ -154,6 +165,7 @@
       <li class="menu-item"><a href="#progress">进度条</a></li>
       <li class="menu-item"><a href="#LK-menu">目录</a></li>
       <li class="menu-item"><a href="#place">占位元素</a></li>
+      <li class="menu-item"><a href="#text">文本溢出</a></li>
     </ul>
   </aside>
 
@@ -729,6 +741,62 @@
           </div>
         </div>
       </div>
+
+    </div>
+
+
+    <div id="text">
+      <label for="" class="LK-lable">文本溢出</label>
+      <div class="LK-tab">
+        <ul>
+          <li data-index="1" class="current">预览</li>
+          <li data-index="2">HTML</li>
+        </ul>
+        <div class="content">
+          <div class="item">
+            <p class="LK-pell" title="设置宽度单行文本溢出省略">设置宽度单行文本溢出省略</p>
+          </div>
+          <div class="item">
+            <div class="LK-codes">
+              &lt;p class=&quot;LK-pell&quot; title=&quot;设置宽度单行文本溢出省略&quot;&gt;设置宽度单行文本溢出省略&lt;/p&gt;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    <div>
+      <div class="LK-tab">
+        <ul>
+          <li data-index="1" class="current">预览</li>
+          <li data-index="2">HTML</li>
+        </ul>
+        <div class="content" style="height: 10rem;">
+          <div class="item">
+            <div class="LK-codes">
+              <p class="LK-Multiline" title="设置宽度高度和行高多行文本溢出省略">
+                多行文本溢出显示省略号，
+                需要设置高度宽度和行高，
+                通过调整高度和行高来调整
+                省略号的位置,根据实际情况调整after的背景渐变色
+              </p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="LK-codes">
+              &lt;p class=&quot;LK-Multiline&quot; title=&quot;设置宽度高度和行高多行文本溢出省略&quot;&gt;
+              多行文本溢出显示省略号，
+              需要设置高度宽度和行高，
+              通过调整高度和行高来调整
+              省略号的位置,根据实际情况调整after的背景渐变色
+              &lt;/p&gt;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     </div>
   </main>
