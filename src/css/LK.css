@@ -24,35 +24,35 @@
   margin: 0;
   /* 初始化颜色 */
   /* 蓝色 */
-  --pr-blue: #0d6efd;
+  --pr-blue: rgba(13, 110, 253, 1);
   /* 灰色 */
-  --pr-gray: #f4f4f5;
+  --pr-gray: rgba(244, 244, 245, 1);
   /* 原色 */
-  --primary: #dad4cb;
+  --primary: rgba(238, 238, 238, 1);
   /* 克莱因蓝 */
-  --klein_blue: #002e9b;
+  --klein_blue: rgba(0, 46, 155, 1);
   /* 警告 */
-  --warning: #f5cd1b;
-  --warnbg: #fdf6ec;
+  --warning: rgba(245, 205, 27, 1);
+  --warnbg: rgba(253, 246, 236, 1);
   /* 白色 */
-  --pr-white: #ffffff;
+  --pr-white: rgba(255, 255, 255, 1);
   /* 危险 */
-  --danger: #d7000f;
+  --danger: rgba(215, 0, 15, 1);
   /* 成功 */
-  --success: #67c23a;
-  --success-bg: #f0f9eb;
+  --success: rgba(103, 194, 58, 1);
+  --success-bg: rgba(240, 249, 235, 1);
   /* 阴影 */
-  --shadow: #ecf0f1;
+  --shadow: rgba(236, 240, 241, 1);
   /* 边框 */
-  --border: #dfe4ea;
+  --border: rgba(223, 228, 234, 1);
   /* 黑色 */
-  --black: #000000;
+  --black: rgba(0, 0, 0, 1);
   /* 表格警告 */
-  --table-danger: #f8d7da;
+  --table-danger: rgba(248, 215, 218, 1);
   /* tip文字 */
-  --tip-color: #94979d;
+  --tip-color: rgba(148, 151, 157, 1);
   /* 蓝色背景 */
-  --blue-bg: #ecf5ff;
+  --blue-bg: rgba(236, 245, 255, 1);
 
   /* 与文字对齐 */
   --vertical-align: center;

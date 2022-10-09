@@ -133,6 +133,17 @@
     .LK-pell {
       width: 100px;
     }
+
+    .height {
+      height: 10rem;
+    }
+
+    /* 增高 */
+    @media screen and (max-width:1000px) {
+      .LK-tab .content.height {
+        height: 15rem;
+      }
+    }
   </style>
 </head>
 
@@ -219,7 +230,7 @@
           <li data-index="1" class="current">预览</li>
           <li data-index="2">HTML</li>
         </ul>
-        <div class="content">
+        <div class="content height">
           <div class="item">
             <div class="btns">
               <button class="btn">原始按钮</button>
@@ -271,7 +282,7 @@
           <li data-index="1" class="current">预览</li>
           <li data-index="2">HTML</li>
         </ul>
-        <div class="content" style="height: 8rem;">
+        <div class="content height">
           <div class="item">
             <select class="LK-select">
               <option selected>Open this select menu</option>
@@ -283,7 +294,8 @@
           <div class="item">
             <div class="LK-codes">
               &lt;select&nbsp;class=&quot;LK-select&quot;&gt;<br>
-              &lt;option&nbsp;selected&gt;Open&nbsp;this&nbsp;select&nbsp;menu&lt;/option&gt;<br>
+              &lt;option&nbsp;selected&gt;Open&nbsp;this&nbsp;select&nbsp;menu
+              &lt;/option&gt;<br>
               &lt;option&nbsp;value=&quot;1&quot;&gt;One&lt;/option&gt;<br>
               &lt;option&nbsp;value=&quot;2&quot;&gt;Two&lt;/option&gt;<br>
               &lt;option&nbsp;value=&quot;3&quot;&gt;Three&lt;/option&gt;<br>
@@ -342,7 +354,7 @@
           <li data-index="1" class="current">预览</li>
           <li data-index="2">HTML</li>
         </ul>
-        <div class="content" style="height:22rem ;">
+        <div class="content" style="height:24rem ;">
           <div class="item">
             <table class="LK-table">
               <thead>
@@ -404,7 +416,7 @@
           <li data-index="1" class="current">预览</li>
           <li data-index="2">HTML</li>
         </ul>
-        <div class="content" style="height:10rem ;">
+        <div class="content height">
           <div class="item">
             <div class="btns">
               <button class="btn" onclick="info()">info提示</button>
@@ -462,7 +474,7 @@
           <li data-index="1" class="current">预览</li>
           <li data-index="2">HTML</li>
         </ul>
-        <div class="content">
+        <div class="content height">
           <div class="item">
             <div class="links">
               <a href="#" class="LK-link">原始链接</a>
@@ -490,7 +502,7 @@
           <li data-index="1" class="current">预览</li>
           <li data-index="2">HTML</li>
         </ul>
-        <div class="content" style="height: 8rem;">
+        <div class="content height">
           <div class="item">
             <div class="tags">
               <div class="LK-tag">原始标签</div>
@@ -540,7 +552,7 @@
           <li data-index="1" class="current">预览</li>
           <li data-index="2">HTML</li>
         </ul>
-        <div class="content" style="height: 20rem;">
+        <div class="content" style="height: 22rem;">
           <div class="item">
             <div class="icons">
               <i class="Li Li-sun"></i>
@@ -619,7 +631,7 @@
           <li data-index="1" class="current">预览</li>
           <li data-index="2">HTML</li>
         </ul>
-        <div class="content">
+        <div class="content height">
           <div class="item">
             <div>
               <input type="checkbox" class="LK-toggle">toggle
@@ -648,7 +660,7 @@
           <li data-index="1" class="current">预览</li>
           <li data-index="2">HTML</li>
         </ul>
-        <div class="content">
+        <div class="content" style="height: 8rem;">
           <div class="item">
             <div>
               <input type="radio" class="LK-radio" name="ljk">213
@@ -681,7 +693,8 @@
           </div>
           <div class="item">
             <div class="LK-codes">
-              &nbsp;&lt;progress&nbsp;value=&quot;10&quot;&nbsp;max=&quot;100&quot;&nbsp;class=&quot;LK-progress&quot;&gt;&lt;/progress&gt;
+              &nbsp;&lt;progress&nbsp;value=&quot;10&quot;&nbsp;max=&quot;100&quot;
+              class=&quot;LK-progress&quot;&gt;&lt;/progress&gt;
             </div>
           </div>
         </div>

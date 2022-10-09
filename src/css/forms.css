@@ -107,7 +107,7 @@
   width: 10rem;
   height: 0.5em;
   vertical-align: var(--vertical-align);
-  background-color: var(--shadow);
+  background-color: var(--border);
   border-radius: 1rem;
 }
 
