@@ -70,20 +70,21 @@
 
 .LK-file {
   cursor: pointer;
-  border: 1px solid var(--primary);
-  width: 10rem;
-  height: fit-content;
+  border: 1px solid var(--tip-color);
+  width: 8rem;
   font-size: 1rem;
   font-weight: 400;
   vertical-align: var(--vertical-align);
-  background-color: var(--pr-white);
   border-radius: 0.3rem;
   margin: 0;
+  font-size: 0.8rem;
+  background-color: none;
 }
 
 .LK-file:focus {
   outline: none;
 }
+
 
 /* 文件上传按钮 */
 .LK-file::-webkit-file-upload-button {
