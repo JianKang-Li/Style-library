@@ -150,3 +150,8 @@
   padding-left: 40px;
   background-image: linear-gradient(to right, transparent, var(--bg-color) 70%);
 }
+
+/* img */
+.LK-img {
+  object-fit: contain;
+}
