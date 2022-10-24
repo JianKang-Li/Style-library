@@ -57,4 +57,25 @@ window.addEventListener("load", () => {
       }
     }
   })
+
+  // 弹窗隐藏
+  const buttons = document.querySelectorAll('.LK-modal .close')
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const id = button.getAttribute('data-id')
+      const alert = document.querySelector(`#${id}`)
+      const body = document.querySelector('body')
+      alert.style.display = 'none'
+      body.classList.remove('noscroll')
+    })
+  })
+  function openAlert(id) {
+    const alert = document.querySelector(`#${id}`)
+    alert.style.display = 'flex'
+    const body = document.querySelector('body')
+    body.classList.add('noscroll')
+  }
+
+  window.openAlert = openAlert
 })
+

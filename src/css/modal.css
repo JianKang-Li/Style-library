@@ -1,0 +1,54 @@
+.LK-modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+
+.LK-modal .body {
+  width: 80%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffff;
+  border-radius: 1rem;
+  padding: 1rem 1rem;
+  animation: moveFromTop 0.3s linear;
+}
+
+.LK-modal .body .title {
+  font-size: larger;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.LK-modal .close {
+  cursor: pointer;
+}
+
+.LK-modal .footer {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+@keyframes moveFromTop {
+  0% {
+    margin-top: -600px;
+  }
+
+  100% {
+    margin-top: 0;
+  }
+}

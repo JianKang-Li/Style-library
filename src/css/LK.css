@@ -12,6 +12,7 @@
 @import url("./progress.css");
 @import url("./menu.css");
 @import url("./place.css");
+@import url("./modal.css");
 
 /* 初始化 */
 /* #region */
@@ -154,4 +155,10 @@
 /* img */
 .LK-img {
   object-fit: contain;
+}
+
+/* 禁止滚动 */
+.noscroll {
+  height: 100vh;
+  overflow: hidden;
 }

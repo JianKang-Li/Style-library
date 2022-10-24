@@ -177,6 +177,7 @@
       <li class="menu-item"><a href="#LK-menu">目录</a></li>
       <li class="menu-item"><a href="#place">占位元素</a></li>
       <li class="menu-item"><a href="#text">文本溢出</a></li>
+      <li class="menu-item"><a href="#modals">对话框</a></li>
     </ul>
   </aside>
 
@@ -233,7 +234,8 @@
         <div class="content height">
           <div class="item">
             <div class="btns">
-              <button class="btn">原始按钮</button>
+              <button class="btn">按钮</button>
+              <button class="btn btn-primary">原始按钮</button>
               <button class="btn btn-danger">危险按钮</button>
               <button class="btn btn-warning">警告按钮</button>
               <button class="btn btn-success">成功按钮</button>
@@ -241,7 +243,8 @@
           </div>
           <div class="item">
             <div class="LK-codes">
-              <code>&lt;button class="btn"&gt;原始按钮&lt;/button&gt;</code><br>
+              <code>&lt;button class="btn"&gt;按钮&lt;/button&gt;</code><br>
+              <code>&lt;button class="btn btn-primary"&gt;原始按钮&lt;/button&gt;</code><br>
               <code>&lt;button class="btn btn-danger"&gt;危险按钮&lt;/button&gt;</code><br>
               <code>&lt;button class="btn btn-warning"&gt;警告按钮&lt;/button&gt;</code><br>
               <code>&lt;button class="btn btn-success"&gt;成功按钮&lt;/button&gt;</code><br>
@@ -754,7 +757,6 @@
           </div>
         </div>
       </div>
-
     </div>
 
 
@@ -809,7 +811,56 @@
       </div>
     </div>
 
+    <div id="modals">
+      <div class="LK-modal" id="modal">
+        <div class="body">
+          <div class="title">这是标题<div class="close btn btn-primary" data-id="modal">x</div>
+          </div>
+          <div class="hr"></div>
+          <div class="content">
+            弹窗内容，弹窗内容
+          </div>
+          <div class="footer">
+            <button data-id="modal" class="close btn btn-primary">关闭</button>
+          </div>
+        </div>
+      </div>
+
+      <label for="" class="LK-lable">对话框</label>
+      <div class="LK-tab">
+        <ul>
+          <li data-index="1" class="current">预览</li>
+          <li data-index="2">HTML</li>
+        </ul>
+        <div class="content" style="height: 20rem;">
+          <div class="item">
+            <button class="btn" onclick="openAlert('modal')">alert</button>
+          </div>
+          <div class="item">
+            <div class="LK-codes">
+              &lt;button class=&quot;btn&quot;
+              onclick=&quot;openAlert(&#x27;modal&#x27;)&quot;&gt;alert&lt;/button&gt;<br>
+              &lt;div class=&quot;LK-modal&quot; id=&quot;modal&quot;&gt;<br>
+              &lt;div class=&quot;body&quot;&gt;<br>
+              &lt;div class=&quot;title&quot;&gt;这是标题&lt;div class=&quot;close btn btn-primary&quot;<br>
+              data-id=&quot;modal&quot;&gt;x&lt;/div&gt;<br>
+              &lt;/div&gt;<br>
+              &lt;div class=&quot;hr&quot;&gt;&lt;/div&gt;<br>
+              &lt;div class=&quot;content&quot;&gt;<br>
+              弹窗内容，弹窗内容<br>
+              &lt;/div&gt;<br>
+              &lt;div class=&quot;footer&quot;&gt;<br>
+              &lt;button data-id=&quot;modal&quot; class=&quot;close btn btn-primary&quot;&gt;关闭&lt;/button&gt;<br>
+              &lt;/div&gt;<br>
+              &lt;/div&gt;<br>
+              &lt;/div&gt;<br>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    </div>
+
   </main>
 
   <script>

@@ -37,10 +37,18 @@
   border: 1px solid var(--danger);
 }
 
+/* 成功按钮 */
 .btn-success {
   color: var(--pr-white);
   background-color: var(--success);
   border: 1px solid var(--success);
+}
+
+/* 原始按钮 */
+.btn-primary {
+  color: var(--pr-white);
+  background-color: var(--pr-blue);
+  border: 1px solid var(--pr-blue);
 }
 
 /* #endregion */
