@@ -9,6 +9,8 @@
   padding: 0.5rem;
   font-size: 0.8rem;
   cursor: pointer;
+  margin: 0.1rem;
+  display: inline-block;
 }
 
 .btn:focus-within {

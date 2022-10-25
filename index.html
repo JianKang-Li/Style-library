@@ -156,6 +156,7 @@
 
   <aside class="sidebar close">
     <ul class="LK-menu">
+      <li class="menu-item"><a href="#prompt">文字提示</a></li>
       <li class="menu-item"><a href="#hr">分割线</a></li>
       <li class="menu-item"><a href="#card">div卡片</a></li>
       <li class="menu-item"><a href="#btns">按钮</a></li>
@@ -182,6 +183,32 @@
   </aside>
 
   <main class="big">
+    <div id="prompt">
+      <label for="" class="LK-lable">文字提示</label>
+      <div class="LK-tab">
+        <ul>
+          <li data-index="1" class="current">预览</li>
+          <li data-index="2">HTML</li>
+        </ul>
+        <div class="content" style="height: 15rem;">
+          <div class="item">
+            <div class="prompt poptip--right btn" data-title="poptip--right">poptip--right</div>
+            <div class="prompt poptip--top btn" data-title="poptip--top">poptip--top</div>
+            <div class="prompt poptip--left btn" data-title="poptip--left">poptip--left</div>
+            <div class="prompt poptip--bottom btn" data-title="poptip--bottom">poptip--bottom</div>
+          </div>
+          <div class="item">
+            <div class="LK-codes">
+              <code>&lt;div class=&quot;prompt poptip--right btn&quot; data-title=&quot;poptip--right&quot;&gt;poptip--right&lt;/div&gt;<br>
+                &lt;div class=&quot;prompt poptip--top btn&quot; data-title=&quot;poptip--top&quot;&gt;poptip--top&lt;/div&gt;<br>
+                &lt;div class=&quot;prompt poptip--left btn&quot; data-title=&quot;poptip--left&quot;&gt;poptip--left&lt;/div&gt;<br>
+                &lt;div class=&quot;prompt poptip--bottom btn&quot; data-title=&quot;poptip--bottom&quot;&gt;poptip--bottom&lt;/div&gt;</code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="hr">
       <label for="" class="LK-lable">分隔线</label>
       <div class="LK-tab">
@@ -858,7 +885,6 @@
           </div>
         </div>
       </div>
-    </div>
     </div>
 
   </main>
