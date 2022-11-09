@@ -66,33 +66,30 @@
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  width: 5rem;
+  position: relative;
 }
 
-.LK-file {
-  cursor: pointer;
-  border: 1px solid var(--tip-color);
-  width: 8rem;
-  font-size: 1rem;
-  font-weight: 400;
-  vertical-align: var(--vertical-align);
-  border-radius: 0.3rem;
-  margin: 0;
-  font-size: 0.8rem;
-  background-color: none;
+.LK-file::before {
+  content: "";
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  background-color: #eee;
+  vertical-align: bottom;
 }
 
-.LK-file:focus {
-  outline: none;
-}
-
-
-/* 文件上传按钮 */
-.LK-file::-webkit-file-upload-button {
-  cursor: pointer;
-  color: #212529;
-  border-width: 0;
-  line-height: 2rem;
-  background-color: var(--pr-blue);
+.LK-file::after {
+  content: "";
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB0PSIxNjY3OTY0NTQ0Nzg1IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjI1NDAiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiI+PHBhdGggZD0iTTUxMiA1MTJWMTcwLjY2NjY2N2g0Mi42NjY2Njd2MzQxLjMzMzMzM2gzNDEuMzMzMzMzdjQyLjY2NjY2N2gtMzQxLjMzMzMzM3YzNDEuMzMzMzMzaC00Mi42NjY2Njd2LTM0MS4zMzMzMzNIMTcwLjY2NjY2N3YtNDIuNjY2NjY3aDM0MS4zMzMzMzN6IiBmaWxsPSIjNDQ0NDQ0IiBwLWlkPSIyNTQxIj48L3BhdGg+PC9zdmc+');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* 滑动条 */
