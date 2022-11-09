@@ -75,13 +75,14 @@
   display: inline-block;
   width: 5rem;
   height: 5rem;
-  background-color: #eee;
+  background-color: var(--tip-color);
   vertical-align: bottom;
+  border-radius: 0.3rem;
 }
 
 .LK-file::after {
   content: "";
-  background-image: url('data:image/svg+xml;base64,PHN2ZyB0PSIxNjY3OTY0NTQ0Nzg1IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjI1NDAiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiI+PHBhdGggZD0iTTUxMiA1MTJWMTcwLjY2NjY2N2g0Mi42NjY2Njd2MzQxLjMzMzMzM2gzNDEuMzMzMzMzdjQyLjY2NjY2N2gtMzQxLjMzMzMzM3YzNDEuMzMzMzMzaC00Mi42NjY2Njd2LTM0MS4zMzMzMzNIMTcwLjY2NjY2N3YtNDIuNjY2NjY3aDM0MS4zMzMzMzN6IiBmaWxsPSIjNDQ0NDQ0IiBwLWlkPSIyNTQxIj48L3BhdGg+PC9zdmc+');
+  background-image: url("data:image/svg+xml,%3Csvg t='1667964544785' class='icon' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg' p-id='2540' width='32' height='32'%3E%3Cpath d='M512 512V170.666667h42.666667v341.333333h341.333333v42.666667h-341.333333v341.333333h-42.666667v-341.333333H170.666667v-42.666667h341.333333z' fill='%23ffffff' p-id='2541'%3E%3C/path%3E%3C/svg%3E");
   background-size: cover;
   background-position: center;
   position: absolute;
